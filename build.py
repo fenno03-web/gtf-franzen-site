@@ -8,7 +8,7 @@ ROOT = Path(__file__).parent
 
 # ---------------------------------------------------------------- Gegevens
 # Nog aan te vullen door de familie. Lege waarden worden niet getoond op de site.
-MAIL = ''          # bijv. 'info@...'
+MAIL = 'info@matrixeventsupport.nl'
 TEL = ''           # bijv. '+31612345678'
 TEL_TXT = ''       # bijv. '+31 6 12 34 56 78'
 ADRES = ''         # bijv. 'Straat 1, 6351 AA Bocholtz'
@@ -118,8 +118,8 @@ TIJDLIJN = [
      'Optochten, sportvelden en evenementen in de hele regio. Met onze omroepinstallaties en 100V-systemen bouwden we een naam op voor betrouwbaarheid.'),
     ('Groeien', 'Licht, stroom en complete producties',
      'Het aanbod groeide mee met de events. Licht, aggregaten en complete producties kwamen erbij, voor festivals, bruiloften, verenigingen en bedrijven.'),
-    ('Vandaag', 'De volgende generatie',
-     'Met MATRIX E.I.L. voor licht en visuals brengt de volgende generatie Franzen nieuwe energie in het bedrijf. Dezelfde betrokkenheid, met de techniek van nu.'),
+    ('Vandaag', 'Leon en de volgende generatie',
+     'Leon Franzen staat aan het roer. Zoon Fenno groeide op tussen de kabels en brengt met zijn eigen bedrijven MATRIX E.I.L. en ARGUS Systems nieuwe energie mee. Dezelfde betrokkenheid, met de techniek van nu.'),
 ]
 
 FAQ = [
@@ -338,7 +338,7 @@ def home():
       </div>
       <div class="cmp cmp-yes reveal">
         <h3>Zo gaat het met Franzen</h3>
-        <ul><li>Alle techniek uit één hand, op elkaar afgestemd</li><li>Eén vast aanspreekpunt, van eerste gesprek tot afbouw</li><li>Korte lijnen, eerlijk advies en geen gedoe</li><li>Mensen die er staan als het telt, want het is ook onze naam</li></ul>
+        <ul><li>Alle techniek uit één hand, bijna volledig eigen materiaal</li><li>Eén vast aanspreekpunt, van eerste gesprek tot afbouw</li><li>Korte lijnen, eerlijk advies en geen gedoe</li><li>Mensen die er staan als het telt, want het is ook onze naam</li></ul>
       </div>
     </div>
   </div>
@@ -401,7 +401,7 @@ def home():
       <div class="val reveal"><span class="val-ic" aria-hidden="true">☎</span><h3>Je belt met de familie</h3><p>Geen callcenter of ticketnummer. Je spreekt de mensen die je event ook echt neerzetten.</p></div>
       <div class="val reveal"><span class="val-ic" aria-hidden="true">✦</span><h3>Maatwerk, geen pakket</h3><p>We kijken naar wat jouw event in de praktijk nodig heeft, niet naar wat er op papier staat.</p></div>
       <div class="val reveal"><span class="val-ic" aria-hidden="true">⚑</span><h3>Onze naam staat erop</h3><p>Elk event draagt de naam Franzen. Daarom laten we pas los als alles goed staat.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">↻</span><h3>Voor de lange termijn</h3><p>We bouwen liever een band op dan dat we één klus doen. Jouw volgende editie wordt daardoor alleen maar beter.</p></div>
+      <div class="val reveal"><span class="val-ic" aria-hidden="true">↻</span><h3>Eigen materiaal</h3><p>We werken bijna volledig met eigen materiaal. Dat kennen we door en door, dus we weten precies wat we meenemen en hoe het erbij staat.</p></div>
     </div>
   </div>
 </section>
@@ -489,10 +489,14 @@ def over():
     <div class="sec-head">{eyebrow('03', 'De mensen')}<h2 class="display reveal">Het gezicht<br><em>achter je event.</em></h2>
     <p class="lead reveal">Bij ons spreek je niet met een afdeling, maar met de familie. Dezelfde mensen die je voorstel maken, staan op de dag zelf naast het podium.</p></div>
     <div class="people">
-      <!-- TODO: namen, rollen en portretten van de familie toevoegen -->
-      <figure class="person reveal"><div class="person-img ph"><span>Foto volgt</span></div><figcaption><b>Naam</b><span>Oprichter / eigenaar</span></figcaption></figure>
-      <figure class="person reveal"><div class="person-img ph"><span>Foto volgt</span></div><figcaption><b>Naam</b><span>Techniek &amp; productie</span></figcaption></figure>
-      <figure class="person reveal"><div class="person-img ph"><span>Foto volgt</span></div><figcaption><b>Fenno Franzen</b><span>Licht &amp; visuals · MATRIX E.I.L.</span></figcaption></figure>
+      <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>LF</span></div><figcaption><b>Leon Franzen</b><span>Eigenaar en eindverantwoordelijke</span><p>Leon kent het vak van binnen en buiten en houdt het overzicht over elke productie. Bij hem weet je waar je aan toe bent.</p></figcaption></figure>
+      <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>FF</span></div><figcaption><b>Fenno Franzen</b><span>Volgende generatie · MATRIX E.I.L. en ARGUS Systems</span><p>Fenno ging van jongs af aan mee naar events en bouwde zijn eigen bedrijven in licht, visuals en showtechniek. Hij zet het familiebedrijf voort.</p></figcaption></figure>
+    </div>
+    <div class="crew reveal">
+      <div><b>8+</b><span>mensen bij de opbouw van een groot event, zoals het jubileum van Sportclub’25</span></div>
+      <div><b>3</b><span>vaste krachten tijdens de show: FOH audio, FOH licht en backstage</span></div>
+      <div><b>Eigen</b><span>materiaal: we draaien bijna alles met spullen die we door en door kennen</span></div>
+    </div>
     </div>
   </div>
 </section>
@@ -502,7 +506,7 @@ def over():
     <div>{eyebrow('04', 'Hoe we werken')}<h2 class="display reveal">Persoonlijk,<br><em>no-nonsense.</em></h2></div>
     <div>
       <p class="lead reveal">Persoonlijk contact, open communicatie en eerlijke samenwerking. Korte lijnen en een nuchtere aanpak. Een project moet bij ons niet alleen goed klinken of werken, het moet ook goed voelen.</p>
-      <p class="reveal">Daarom kiezen we nooit voor een standaardoplossing, maar voor wat bij jouw event past. En voor licht en visuals werken we samen met <a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a>, opgericht door Fenno Franzen. Zo blijft ook de nieuwste techniek in de familie.</p>
+      <p class="reveal">Daarom kiezen we nooit voor een standaardoplossing, maar voor wat bij jouw event past. En voor licht en visuals werken we samen met <a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a>, het bedrijf van Fenno Franzen. Zo blijft ook de nieuwste techniek in de familie.</p>
     </div>
   </div>
 </section>

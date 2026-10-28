@@ -428,3 +428,13 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 }
 .story-copy .lead { margin-top: 28px; }
 .display + .lead, .display + p { margin-top: 26px; }
+.people { grid-template-columns: repeat(2, 1fr); }
+.person-img.mono { aspect-ratio: 16/9; display: grid; place-items: center; background: var(--night); color: var(--glow); font: italic 400 clamp(56px, 7vw, 96px)/1 var(--serif); position: relative; overflow: hidden; }
+.person-img.mono::after { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 80% at 50% 120%, rgba(224, 145, 47, .45), transparent 70%); }
+.person p { color: var(--ink-2); margin: 10px 0 0; max-width: 480px; }
+.crew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.crew div { background: var(--paper-2); border-radius: var(--r); padding: 26px; }
+.crew b { display: block; font: 400 52px/1 var(--serif); color: var(--amber-2); margin-bottom: 10px; }
+.crew span { color: var(--ink-2); font-size: 15.5px; }
+@media (max-width: 860px) { .people, .crew { grid-template-columns: 1fr; } }
+.person .person-img.mono span { font: inherit; color: inherit; position: relative; z-index: 1; }
