@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fenno03-web.github.io/gtf-franzen-site/sitemap.xml
