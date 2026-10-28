@@ -20,8 +20,8 @@ WHATSAPP = f'https://wa.me/{TEL.lstrip("+")}' if TEL else ''
 BASE = 'https://fenno03-web.github.io/gtf-franzen-site/'
 MATRIX = 'https://fenno03-web.github.io/matrix-eil-site/'
 
-FONTS = ('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700'
-         '&family=Instrument+Sans:wght@400;500;600&display=swap')
+FONTS = ('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900'
+         '&family=Inter:wght@400;500;600&display=swap')
 
 NAV = [('diensten.html', 'Diensten'), ('projecten.html', 'Projecten'), ('over.html', 'Ons verhaal'), ('werkwijze.html', 'Werkwijze')]
 CURRENT = 'index.html'
@@ -63,40 +63,45 @@ DIENSTEN = [
      'kort': 'Geen stroom, geen show. Wij regelen het.',
      'tekst': 'Op locatie begint alles bij stroom. We leveren aggregaten en zorgen voor een praktische, veilige stroomverdeling, zodat geluid, licht, bars en foodtrucks gewoon blijven draaien.',
      'punten': ['Aggregaten', 'Stroomverdeling en bekabeling', 'Planning van de stroombehoefte vooraf', 'Op afgelegen locaties en in tenten']},
-    {'slug': 'productie', 'nr': '05', 'titel': 'Complete productie', 'img': 'productie.jpg',
+    {'slug': 'productie', 'nr': '05', 'titel': 'Complete productie', 'img': 'proj/sportclub-jubileum/01.jpg',
      'kort': 'Eén partner, van eerste idee tot laatste kabel.',
      'tekst': 'De kracht van GTF Franzen zit in het geheel. Geluid, licht, stroom en podiumtechniek komen bij ons uit één hand, met één aanspreekpunt. Je hoeft niet te schakelen tussen vijf leveranciers. Wij denken mee, plannen alles op elkaar af en staan er op de dag zelf.',
      'punten': ['Eén aanspreekpunt voor alle techniek', 'Technische planning en draaiboek', 'Opbouw, show en afbouw', 'Voor festivals, jubilea, bedrijfsevents en meer']},
 ]
 
 EVENTS = [
-    {'id': 'festival', 'label': 'Festival', 'img': 'festival.jpg',
+    {'id': 'festival', 'label': 'Festival', 'img': 'proj/sportclub-jubileum/28.jpg',
      'kop': 'Een festival dat staat als een huis.',
      'tekst': 'Meerdere podia, wisselende artiesten en duizenden bezoekers. We plannen de techniek van alle stages op elkaar af en houden het overzicht, van het eerste overleg tot de laatste act.',
      'regelen': ['Geluid en monitoring per podium', 'Lichtshow en effecten met MATRIX E.I.L.', 'Aggregaten en stroomverdeling', 'Omroep over het hele terrein', 'Technische crew op locatie']},
-    {'id': 'dorpsfeest', 'label': 'Dorpsfeest & carnaval', 'img': 'dorpsfeest.jpg',
+    {'id': 'dorpsfeest', 'label': 'Dorpsfeest & carnaval', 'img': 'ols.jpg',
      'kop': 'Het hele dorp op de been.',
      'tekst': 'Kermis, carnaval, schuttersfeest of een avond in de feesttent. We kennen de regio, de verenigingen en de locaties, en weten wat er nodig is om er een avond van te maken waar nog lang over gepraat wordt.',
      'regelen': ['Tentgeluid en sfeerlicht', 'Omroep voor optochten', 'Stroom voor tent, bar en kraampjes', 'Podium voor bands en zaalartiesten', 'Snel schakelen als het programma verandert']},
-    {'id': 'feest', 'label': 'Bruiloft & feest', 'img': 'feest.jpg',
+    {'id': 'feest', 'label': 'Bruiloft & feest', 'img': 'zaal.jpg',
      'kop': 'Jullie dag, zonder zorgen over techniek.',
      'tekst': 'Van de ceremonie en speeches tot de band en de dansvloer. Wij zorgen dat alles klinkt en er mooi uitziet, zodat jullie alleen maar hoeven te genieten.',
      'regelen': ['Microfoons voor ceremonie en speeches', 'Geluid voor band of dj', 'Sfeerverlichting en dansvloer', 'Opbouw voordat de gasten komen', 'Eén vast aanspreekpunt']},
-    {'id': 'bedrijf', 'label': 'Bedrijfsevent & congres', 'img': 'bedrijf.jpg',
+    {'id': 'bedrijf', 'label': 'Bedrijfsevent & congres', 'img': 'gala.jpg',
      'kop': 'Professioneel, strak en op tijd.',
      'tekst': 'Een presentatie, congres, personeelsfeest of productlancering. De techniek moet gewoon werken en de boodschap moet aankomen. Wij zorgen voor heldere spraak, passend licht en een soepel verloop.',
      'regelen': ['Spraak en presentatiegeluid', 'Podium- en sfeerverlichting', 'Draadloze microfoons', 'Technische regie tijdens het programma', 'Discreet opbouwen en afbouwen']},
-    {'id': 'vereniging', 'label': 'Vereniging & jubileum', 'img': 'vereniging.jpg',
+    {'id': 'vereniging', 'label': 'Vereniging & jubileum', 'img': 'proj/sportclub-jubileum/14.jpg',
      'kop': 'Een jubileum om nooit te vergeten.',
      'tekst': 'Honderd jaar sportclub, een lustrum of een bijzonder concert. Voor zo’n moment wil je techniek die het verhaal van je vereniging groot maakt. Daar denken we graag in mee, ook met een beperkt budget.',
      'regelen': ['Volledige productie van tent of zaal', 'Show met licht, effecten en visuals', 'Geluid voor live acts', 'Stroom en infrastructuur', 'Meedenken over planning en budget']},
-    {'id': 'gemeente', 'label': 'Gemeente & omroep', 'img': 'omroep.jpg',
+    {'id': 'gemeente', 'label': 'Gemeente & omroep', 'img': 'amstel-2.jpg',
      'kop': 'Betrouwbaar, voor publieke momenten.',
      'tekst': 'Herdenkingen, intochten, markten en evenementen in de openbare ruimte. Met onze ervaring in omroep- en 100V-systemen zorgen we dat iedereen op het terrein het goed hoort.',
      'regelen': ['Omroepinstallaties en 100V', 'Spraak bij ceremonies en herdenkingen', 'Stroom op locatie', 'Advies over de opzet vooraf', 'Ervaring in NL, BE en DE']},
 ]
 
 PROJECTEN = [
+    {'slug': 'amstel-gold-race', 'titel': 'Amstel Gold Race', 'sub': 'Omroep langs het parcours', 'plek': 'Zuid-Limburg', 'jaar': '2025 & 2026',
+     'fotos': ['amstel-1.jpg', 'amstel-2.jpg', 'amstel-3.jpg', 'amstel-6.jpg', 'amstel-4.jpg', 'amstel-5.jpg'], 'cover': 'amstel-3.jpg',
+     'tekst': 'Bij een van de grootste wielerklassiekers van Nederland hangen onze hoorns langs het parcours. Het publiek op de route hoort precies wat er gebeurt in de koers, en dat elk jaar weer. Hier zie je waar we groot mee zijn geworden: omroep die het gewoon doet.',
+     'rol': 'Omroepinstallatie langs het parcours door GTF Franzen',
+     'pers': None},
     {'slug': 'sportclub-jubileum', 'titel': 'Sportclub’25', 'sub': '100 jaar jubileum', 'plek': 'Bocholtz', 'jaar': '2025',
      'map': 'sportclub-jubileum', 'n': 30,
      'tekst': 'Voor het honderdjarig bestaan van Sportclub’25 in Bocholtz stond er een productie die het dorp niet snel vergeet. Een groot podium, een volle tent en een avond lang artiesten, met een show die van begin tot eind op elkaar was afgestemd.',
@@ -141,11 +146,23 @@ STAPPEN = [
 
 
 # ---------------------------------------------------------------- Onderdelen
-SEAL = '''<svg class="seal" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="sealpath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-<circle cx="100" cy="100" r="96" class="seal-ring"/><text class="seal-text"><textPath href="#sealpath">Familiebedrijf · Bocholtz · Sinds 1960 · Sound · Light · Vision ·</textPath></text>
-<text x="100" y="96" text-anchor="middle" class="seal-f">F</text><text x="100" y="126" text-anchor="middle" class="seal-y">50+ jaar</text></svg>'''
+RINGS = [(702, 12), (625, 21), (548, 30), (471, 38), (393, 50)]
+GTF = ('<path d="M490 530h527v50H778v480h-56V580H490z"/>'
+       '<path d="M488 628h188v97h-60v-39h-70v219h70V828h-38v-59h100v193H488z"/>'
+       '<path d="M826 627h192v62H890v77h94v62h-94v134h-64z"/>')
 
-LOGO = '<span class="logo-mark">F</span><span class="logo-txt"><b>GTF Franzen</b><small>Sound · Light · Vision</small></span>'
+
+def mark(cls='mark', small=False):
+    rings = [(r, w * 1.7) for r, w in RINGS[1:]] if small else RINGS
+    r = ''.join(f'<circle cx="750" cy="750" r="{rad}" stroke-width="{w:g}"/>' for rad, w in rings)
+    return f'<svg class="{cls}" viewBox="0 0 1500 1500" aria-hidden="true"><g class="rings">{r}</g><g class="gtf">{GTF}</g></svg>'
+
+
+def cover_of(p):
+    return f'assets/img/{p["cover"]}' if 'cover' in p else f'assets/img/proj/{p["map"]}/cover.jpg'
+
+
+LOGO = mark('logo-mark', small=True) + '<span class="logo-txt"><b>GTF Franzen</b><small>Sound · Light · Vision</small></span>'
 
 
 def head(title, desc, image='assets/img/og.jpg', ld=None):
@@ -169,7 +186,7 @@ def head(title, desc, image='assets/img/og.jpg', ld=None):
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{BASE}{image}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#16110d">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -295,7 +312,7 @@ def home():
 
     proj = ''.join(f'''
       <a class="proj reveal" href="project-{p["slug"]}.html">
-        <span class="proj-img"><img src="assets/img/proj/{p["map"]}/cover.jpg" alt="{p["titel"]}" loading="lazy"></span>
+        <span class="proj-img"><img src="{cover_of(p)}" alt="{p["titel"]}" loading="lazy"></span>
         <span class="proj-meta">{p["plek"]} · {p["jaar"]}</span>
         <h3>{p["titel"]}</h3>
         <p>{p["sub"]}</p>
@@ -306,14 +323,14 @@ def home():
         {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]}]
 
     body = f'''<section class="hero">
-  <div class="hero-media"><img src="assets/img/hero.jpg" alt="Volle tent tijdens het 100-jarig jubileum van Sportclub’25 in Bocholtz" fetchpriority="high"></div>
+  <div class="hero-media"><img src="assets/img/hero.jpg" alt="Podium met CO2-jets en confetti boven een vol publiek" fetchpriority="high"></div>
+  <div class="hero-waves" aria-hidden="true">{mark('wave-mark')}<i></i><i></i><i></i></div>
   <div class="wrap hero-inner">
-    <p class="hero-kicker">GTF Franzen · Familiebedrijf uit Bocholtz</p>
-    <h1 class="hero-title">Jouw event.<br><em>Onze familie</em><br>staat erachter.</h1>
+    <p class="hero-kicker"><span class="dot"></span>Familiebedrijf uit Bocholtz · NL · BE · DE</p>
+    <h1 class="hero-title">Jouw event.<br>Onze <em>familie</em><br>erachter.</h1>
     <p class="hero-lead">Geluid, licht, stroom en complete producties voor festivals, dorpsfeesten, bruiloften, verenigingen en bedrijven. Al meer dan 50 jaar, met één aanspreekpunt van begin tot eind.</p>
     <div class="btns"><a class="btn fill" href="contact.html">Vraag een offerte aan</a><a class="btn ghost" href="#evenement">Wat organiseer je?</a></div>
   </div>
-  {SEAL}
 </section>
 
 <section class="facts" aria-label="GTF Franzen in cijfers">
@@ -371,11 +388,23 @@ def home():
   <div class="wrap two">
     <div class="story-copy">
       {eyebrow('04', 'Ons verhaal')}
-      <h2 class="display reveal">Geen bedrijf met<br>een familie, maar<br><em>een familie met een vak.</em></h2>
+      <h2 class="display reveal">Een familie<br>met een <em>vak.</em></h2>
       <p class="lead reveal">Het begon met een winkel in Bocholtz en speakers die we zelf bouwden. Meer dan 50 jaar later staan we nog steeds met dezelfde mentaliteit op elk event: vakmanschap, betrokkenheid en aandacht voor elk detail.</p>
       <a class="btn ghost reveal" href="over.html">Lees ons verhaal</a>
+      <div class="then-now reveal">
+        <figure><img src="assets/img/bus-toen.jpg" alt="De oude GTF-bus met het logo en hoorns op het dak" loading="lazy"><figcaption>Toen</figcaption></figure>
+        <figure><img src="assets/img/bussen-nu.jpg" alt="De bussen van Franzen Bocholtz voor een locatie" loading="lazy"><figcaption>Nu</figcaption></figure>
+      </div>
     </div>
     <ol class="timeline">{tijd}</ol>
+  </div>
+</section>
+
+<section class="proof">
+  <img src="assets/img/amstel-2.jpg" alt="Hoorn met de naam Franzen Bocholtz naast een vlag van de Amstel Gold Race" loading="lazy">
+  <div class="wrap">
+    <p class="proof-q reveal">Onze naam hangt<br>langs het parcours van<br><em>de Amstel Gold Race.</em></p>
+    <a class="link-arrow reveal" href="project-amstel-gold-race.html">Bekijk het project</a>
   </div>
 </section>
 
@@ -398,10 +427,10 @@ def home():
       <h2 class="display reveal">Wat een familiebedrijf<br><em>anders maakt.</em></h2>
     </div>
     <div class="val-grid">
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">☎</span><h3>Je belt met de familie</h3><p>Geen callcenter of ticketnummer. Je spreekt de mensen die je event ook echt neerzetten.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">✦</span><h3>Maatwerk, geen pakket</h3><p>We kijken naar wat jouw event in de praktijk nodig heeft, niet naar wat er op papier staat.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">⚑</span><h3>Onze naam staat erop</h3><p>Elk event draagt de naam Franzen. Daarom laten we pas los als alles goed staat.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">↻</span><h3>Eigen materiaal</h3><p>We werken bijna volledig met eigen materiaal. Dat kennen we door en door, dus we weten precies wat we meenemen en hoe het erbij staat.</p></div>
+      <div class="val reveal"><span class="val-ic" aria-hidden="true">01</span><h3>Je belt met de familie</h3><p>Geen callcenter of ticketnummer. Je spreekt de mensen die je event ook echt neerzetten.</p></div>
+      <div class="val reveal"><span class="val-ic" aria-hidden="true">02</span><h3>Maatwerk, geen pakket</h3><p>We kijken naar wat jouw event in de praktijk nodig heeft, niet naar wat er op papier staat.</p></div>
+      <div class="val reveal"><span class="val-ic" aria-hidden="true">03</span><h3>Onze naam staat erop</h3><p>Elk event draagt de naam Franzen. Daarom laten we pas los als alles goed staat.</p></div>
+      <div class="val reveal"><span class="val-ic" aria-hidden="true">04</span><h3>Eigen materiaal</h3><p>We werken bijna volledig met eigen materiaal. Dat kennen we door en door, dus we weten precies wat we meenemen en hoe het erbij staat.</p></div>
     </div>
   </div>
 </section>
@@ -464,9 +493,9 @@ def over():
 <section class="section">
   <div class="wrap two">
     <div class="album reveal" aria-hidden="true">
-      <figure class="polaroid p1"><img src="assets/img/tent.jpg" alt="" loading="lazy"><figcaption>Woeësj-Stock, 2026</figcaption></figure>
-      <figure class="polaroid p2"><img src="assets/img/dorpsfeest.jpg" alt="" loading="lazy"><figcaption>Simpelveld</figcaption></figure>
-      <figure class="polaroid p3"><img src="assets/img/publiek.jpg" alt="" loading="lazy"><figcaption>100 jaar Sportclub’25</figcaption></figure>
+      <figure class="polaroid p1"><img src="assets/img/bus-toen.jpg" alt="" loading="lazy"><figcaption>De eerste GTF-bus</figcaption></figure>
+      <figure class="polaroid p2"><img src="assets/img/bus-t3.jpg" alt="" loading="lazy"><figcaption>Onze oude T3</figcaption></figure>
+      <figure class="polaroid p3"><img src="assets/img/bussen-nu.jpg" alt="" loading="lazy"><figcaption>Vandaag</figcaption></figure>
     </div>
     <div>
       {eyebrow('01', 'Waar het begon')}
@@ -545,7 +574,7 @@ def werkwijze():
 def projecten():
     kaarten = ''.join(f'''
       <a class="proj big reveal" href="project-{p["slug"]}.html">
-        <span class="proj-img"><img src="assets/img/proj/{p["map"]}/01.jpg" alt="{p["titel"]}" loading="lazy"></span>
+        <span class="proj-img"><img src="{cover_of(p)}" alt="{p["titel"]}" loading="lazy"></span>
         <span class="proj-meta">{p["plek"]} · {p["jaar"]}</span>
         <h3>{p["titel"]}</h3>
         <p>{p["tekst"]}</p>
@@ -567,11 +596,12 @@ def projecten():
 
 
 def project(p):
-    fotos = [f'assets/img/proj/{p["map"]}/{i:02d}.jpg' for i in range(1, p['n'] + 1)]
+    fotos = [f'assets/img/{f}' for f in p['fotos']] if 'fotos' in p else [f'assets/img/proj/{p["map"]}/{i:02d}.jpg' for i in range(1, p['n'] + 1)]
+    cover = f'assets/img/{p["cover"]}' if 'cover' in p else f'assets/img/proj/{p["map"]}/cover.jpg'
     grid = ''.join(f'<button class="ph reveal" type="button" data-i="{i}" aria-label="Foto {i + 1} groot bekijken"><img src="{f}" alt="{p["titel"]}, foto {i + 1}" loading="lazy"></button>' for i, f in enumerate(fotos))
     pers = f'<div><span>In de pers</span><a class="link-arrow" href="{p["pers"][1]}" target="_blank" rel="noopener">{p["pers"][0]}</a></div>' if p['pers'] else ''
     body = f'''<section class="pp-hero">
-  <img src="assets/img/proj/{p["map"]}/cover.jpg" alt="" fetchpriority="high">
+  <img src="{cover}" alt="" fetchpriority="high">
   <div class="wrap">
     <p class="crumb"><a href="projecten.html">Projecten</a> / {p["titel"]}</p>
     <h1 class="display xl">{p["titel"]}</h1>
@@ -581,7 +611,7 @@ def project(p):
 <section class="section">
   <div class="wrap two">
     <p class="lead reveal">{p["tekst"]}</p>
-    <div class="pp-facts reveal"><div><span>Wie deed wat</span><b>{p["rol"]}</b></div>{pers}<div><span>Foto’s</span><b>{p["n"]} beelden</b></div></div>
+    <div class="pp-facts reveal"><div><span>Wie deed wat</span><b>{p["rol"]}</b></div>{pers}<div><span>Foto’s</span><b>{len(fotos)} beelden</b></div></div>
   </div>
 </section>
 <section class="section" style="padding-top:0">
@@ -589,7 +619,7 @@ def project(p):
 </section>
 {cta_band()}'''
     return page(f'project-{p["slug"]}.html', f'{p["titel"]} | Projecten | GTF Franzen', f'{p["titel"]}, {p["sub"].lower()} in {p["plek"]} ({p["jaar"]}). Een project van GTF Franzen.',
-                body, image=f'assets/img/proj/{p["map"]}/cover.jpg')
+                body, image=cover)
 
 
 # ---------------------------------------------------------------- Contact
