@@ -12,7 +12,6 @@ Pagina's worden gebouwd met `python3 build.py`. Pas teksten en gegevens aan in `
 ## Nog aan te vullen
 
 - Contactgegevens bovenaan `build.py` (`TEL`, `ADRES`, `KVK`, socials). Lege velden worden niet getoond. Het offerteformulier mailt naar `MAIL`.
-- Logo van GTF Franzen (nu een tijdelijk woordmerk)
 - Eventueel portretten van Leon en Fenno
 - Meer projecten en eventueel klantreacties
 - Eigen domein: zet `BASE` in `build.py` en voeg een `CNAME`-bestand toe
