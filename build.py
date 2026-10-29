@@ -8,7 +8,9 @@ ROOT = Path(__file__).parent
 
 # ---------------------------------------------------------------- Gegevens
 # Nog aan te vullen door de familie. Lege waarden worden niet getoond op de site.
-MAIL = 'info@matrixeventsupport.nl'
+MAIL = 'info@franzenbocholtz.nl'  # algemeen adres, wordt doorgestuurd
+# Web3Forms access key (web3forms.com, aangemaakt met het algemene adres). Leeg = formulier opent een mail aan MAIL.
+FORM_KEY = ''
 TEL = ''           # bijv. '+31612345678'
 TEL_TXT = ''       # bijv. '+31 6 12 34 56 78'
 ADRES = ''         # bijv. 'Straat 1, 6351 AA Bocholtz'
@@ -53,12 +55,12 @@ DIENSTEN = [
      'punten': ['Systemen voor zaal, tent en open lucht', 'Podium- en monitorgeluid voor bands en artiesten', 'Speech, ceremonies en presentaties', 'Bediening door eigen technici']},
     {'slug': 'licht', 'nr': '02', 'titel': 'Licht', 'img': 'licht.jpg',
      'kort': 'Sfeer waar het moet, spektakel waar het kan.',
-     'tekst': 'Licht bepaalt hoe je event voelt, en hoe het eruitziet op elke foto en video. Samen met MATRIX E.I.L. verzorgen we lichtontwerp, voorprogrammering en live bediening, van subtiel en stijlvol tot een volledig geprogrammeerde show.',
+     'tekst': 'Licht bepaalt hoe je event voelt, en hoe het eruitziet op elke foto en video. Samen met MATRIX E.I.L., dat draait op grote festivals en clubshows, verzorgen we lichtontwerp, voorprogrammering, visuals en live bediening. Zo krijgt ook een dorpsfeest of jubileum de kennis van de grote podia.',
      'punten': ['Lichtontwerp en previsualisatie', 'Programmering en live operation', 'LED, effecten, CO2 en confetti', 'Sfeerverlichting voor zalen en tenten']},
     {'slug': 'omroep', 'nr': '03', 'titel': 'Omroep & 100V', 'img': 'omroep.jpg',
      'kort': 'Waar we al generaties bekend om staan.',
-     'tekst': 'Omroepinstallaties en 100V-systemen zitten in ons DNA. Voor optochten, sportterreinen, markten en evenementen over een groot gebied zorgen we dat iedereen hoort wat er gezegd wordt, betrouwbaar en goed verstaanbaar.',
-     'punten': ['Tijdelijke en vaste omroepinstallaties', '100V-systemen over grote afstanden', 'Optochten, sportvelden en evenemententerreinen', 'Advies, aanleg en onderhoud']},
+     'tekst': 'Omroepinstallaties en 100V-systemen zitten in ons DNA. Op het Oud Limburgs Schuttersfeest (OLS) hingen meer dan 140 van onze hoorns en reden diverse jurywagens met onze omroep. Langs de Amstel Gold Race hangen ze langs het parcours. Over een groot terrein zorgen we dat iedereen hoort wat er gezegd wordt, betrouwbaar en goed verstaanbaar.',
+     'punten': ['Tijdelijke en vaste omroepinstallaties', '100V-systemen over grote afstanden', 'Jurywagens en mobiele omroep', 'Schuttersfeesten, wielerkoersen en evenemententerreinen']},
     {'slug': 'stroom', 'nr': '04', 'titel': 'Stroom & infra', 'img': 'stroom.jpg',
      'kort': 'Geen stroom, geen show. Wij regelen het.',
      'tekst': 'Op locatie begint alles bij stroom. We leveren aggregaten en zorgen voor een praktische, veilige stroomverdeling, zodat geluid, licht, bars en foodtrucks gewoon blijven draaien.',
@@ -74,7 +76,7 @@ EVENTS = [
      'kop': 'Een festival dat staat als een huis.',
      'tekst': 'Meerdere podia, wisselende artiesten en duizenden bezoekers. We plannen de techniek van alle stages op elkaar af en houden het overzicht, van het eerste overleg tot de laatste act.',
      'regelen': ['Geluid en monitoring per podium', 'Lichtshow en effecten met MATRIX E.I.L.', 'Aggregaten en stroomverdeling', 'Omroep over het hele terrein', 'Technische crew op locatie']},
-    {'id': 'dorpsfeest', 'label': 'Dorpsfeest & carnaval', 'img': 'ols.jpg',
+    {'id': 'dorpsfeest', 'label': 'Dorpsfeest & carnaval', 'img': 'proj/woeesj-stock/01.jpg',
      'kop': 'Het hele dorp op de been.',
      'tekst': 'Kermis, carnaval, schuttersfeest of een avond in de feesttent. We kennen de regio, de verenigingen en de locaties, en weten wat er nodig is om er een avond van te maken waar nog lang over gepraat wordt.',
      'regelen': ['Tentgeluid en sfeerlicht', 'Omroep voor optochten', 'Stroom voor tent, bar en kraampjes', 'Podium voor bands en zaalartiesten', 'Snel schakelen als het programma verandert']},
@@ -90,10 +92,10 @@ EVENTS = [
      'kop': 'Een jubileum om nooit te vergeten.',
      'tekst': 'Honderd jaar sportclub, een lustrum of een bijzonder concert. Voor zo’n moment wil je techniek die het verhaal van je vereniging groot maakt. Daar denken we graag in mee, ook met een beperkt budget.',
      'regelen': ['Volledige productie van tent of zaal', 'Show met licht, effecten en visuals', 'Geluid voor live acts', 'Stroom en infrastructuur', 'Meedenken over planning en budget']},
-    {'id': 'gemeente', 'label': 'Gemeente & omroep', 'img': 'amstel-2.jpg',
-     'kop': 'Betrouwbaar, voor publieke momenten.',
-     'tekst': 'Herdenkingen, intochten, markten en evenementen in de openbare ruimte. Met onze ervaring in omroep- en 100V-systemen zorgen we dat iedereen op het terrein het goed hoort.',
-     'regelen': ['Omroepinstallaties en 100V', 'Spraak bij ceremonies en herdenkingen', 'Stroom op locatie', 'Advies over de opzet vooraf', 'Ervaring in NL, BE en DE']},
+    {'id': 'gemeente', 'label': 'Omroep & grote terreinen', 'img': 'ols.jpg',
+     'kop': 'Iedereen hoort het. Overal op het terrein.',
+     'tekst': 'Schuttersfeesten, wielerklassiekers, herdenkingen en markten. Op het OLS, het Oud Limburgs Schuttersfeest, hingen meer dan 140 hoorns op 100V en reden er diverse jurywagens met onze omroep. Langs het parcours van de Amstel Gold Race hoort het publiek dankzij ons wat er in de koers gebeurt.',
+     'regelen': ['Omroep op 100V over grote afstanden', 'Honderden hoorns op één terrein', 'Jurywagens en mobiele omroep', 'Spraak bij ceremonies en herdenkingen', 'Advies over de opzet vooraf']},
 ]
 
 PROJECTEN = [
@@ -202,6 +204,7 @@ def header(current, dark=True):
 <header class="site-header{' on-dark' if dark else ''}">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="GTF Franzen home">{LOGO}</a>
+    <div class="vu" aria-hidden="true"><span class="vu-l">L</span><span class="vu-row" data-ch="0">{'<i></i>' * 16}</span><span class="vu-l">R</span><span class="vu-row" data-ch="1">{'<i></i>' * 16}</span></div>
     <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="Hoofdmenu">{links}<a class="nav-cta" href="contact.html"{cur if current == 'contact.html' else ''}>Offerte aanvragen</a></nav>
   </div>
@@ -261,12 +264,26 @@ def footer(extra_js=''):
 
 
 def eyebrow(nr, txt):
+    nr = f'CH {nr}' if nr.isdigit() else nr
     return f'<p class="eyebrow reveal"><span>{nr}</span>{txt}</p>'
 
 
+PLUG = '''<div class="power">
+      <div class="power-track">
+        <span class="cable" aria-hidden="true"></span>
+        <button class="plug" type="button" aria-label="Steek de stekker in het stopcontact">
+          <svg viewBox="0 0 120 70" aria-hidden="true"><rect x="0" y="22" width="20" height="26" rx="4" class="p-grip"/><rect x="16" y="8" width="58" height="54" rx="12" class="p-body"/><rect x="74" y="20" width="34" height="5" rx="2.5" class="p-pin"/><rect x="74" y="45" width="34" height="5" rx="2.5" class="p-pin"/><circle cx="45" cy="35" r="9" class="p-mark"/></svg>
+        </button>
+        <span class="socket" aria-hidden="true"><svg viewBox="0 0 90 90"><circle cx="45" cy="45" r="42" class="s-plate"/><circle cx="45" cy="45" r="30" class="s-cup"/><circle cx="45" cy="34" r="4.5" class="s-hole"/><circle cx="45" cy="56" r="4.5" class="s-hole"/><circle cx="45" cy="45" r="44" class="s-led"/></svg></span>
+      </div>
+      <p class="power-hint"><span class="off">Sleep de stekker erin</span><span class="on">Stroom staat erop. Nu jouw event.</span></p>
+    </div>'''
+
+
 def cta_band():
-    return '''<section class="cta-band">
+    return f'''<section class="cta-band">
   <div class="wrap reveal">
+    {PLUG}
     <h2 class="display">Vertel ons wat je<br><em>van plan bent.</em></h2>
     <p class="lead">Een kort berichtje is genoeg. We denken vrijblijvend mee en sturen je een voorstel op maat.</p>
     <div class="btns"><a class="btn fill" href="contact.html">Vraag een offerte aan</a><a class="btn ghost" href="projecten.html">Bekijk ons werk</a></div>
@@ -287,7 +304,8 @@ def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image=
 def home():
     diensten = ''.join(f'''
       <a class="svc reveal" href="diensten.html#{d["slug"]}">
-        <span class="svc-nr">{d["nr"]}</span>
+        <span class="svc-nr">CH {d["nr"]}</span>
+        <svg class="scope" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 12.5 2 25 20 T 50 20 T 75 20 T 100 20 T 125 20 T 150 20 T 175 20 T 200 20"/></svg>
         <span class="svc-img"><img src="assets/img/{d["img"]}" alt="" loading="lazy"></span>
         <h3>{d["titel"]}</h3>
         <p>{d["kort"]}</p>
@@ -335,10 +353,10 @@ def home():
 
 <section class="facts" aria-label="GTF Franzen in cijfers">
   <div class="wrap">
-    <div class="fact reveal"><b data-count="50">50</b><sup>+</sup><span>jaar ervaring in geluid en techniek</span></div>
-    <div class="fact reveal"><b data-count="100">100</b><sup>+</sup><span>projecten per jaar</span></div>
-    <div class="fact reveal"><b>1</b><span>aanspreekpunt voor alle techniek</span></div>
-    <div class="fact reveal"><b>3</b><span>landen: NL, BE en DE</span></div>
+    <div class="fact reveal"><b data-count="50">50</b><sup>+</sup><span>jaar ervaring in geluid en techniek</span><i class="meter" aria-hidden="true"></i></div>
+    <div class="fact reveal"><b data-count="100">100</b><sup>+</sup><span>projecten per jaar</span><i class="meter" aria-hidden="true"></i></div>
+    <div class="fact reveal"><b data-count="140">140</b><sup>+</sup><span>100V-hoorns op één event, zoals het OLS</span><i class="meter" aria-hidden="true"></i></div>
+    <div class="fact reveal"><b class="fact-txt">NL·BE·DE</b><span>van dorpsplein tot festivalterrein</span><i class="meter" aria-hidden="true"></i></div>
   </div>
 </section>
 
@@ -384,10 +402,24 @@ def home():
   </div>
 </section>
 
+<section class="section matrix">
+  <div class="wrap two">
+    <div class="matrix-img reveal"><img src="assets/img/licht.jpg" alt="Lichtshow met beams en LED boven een vol publiek" loading="lazy"><span class="matrix-tag">Licht · Video · Sfeer</span></div>
+    <div>
+      {eyebrow('04', 'Met MATRIX E.I.L.')}
+      <h2 class="display reveal">De kennis van<br><em>de grote podia.</em></h2>
+      <p class="lead reveal">Voor licht, video en sfeer werken we samen met MATRIX E.I.L., het bedrijf van Fenno Franzen. MATRIX draait op grote festivals en clubshows als Electrisize, Boiler Room en ParkCity Live.</p>
+      <p class="reveal">Die ervaring nemen we mee naar jouw event. MATRIX kijkt mee naar de sfeer, ontwerpt het licht, maakt visuals en zet LED-schermen neer. Zo krijgt een dorpsfeest, jubileum of bedrijfsevent de uitstraling van een groot podium, en heb jij nog steeds één aanspreekpunt.</p>
+      <ul class="checks reveal"><li>Lichtontwerp en voorprogrammering</li><li>Video, visuals en LED-schermen</li><li>Advies over sfeer en beleving</li><li>Live bediening tijdens de show</li></ul>
+      <a class="link-arrow reveal" href="{MATRIX}" target="_blank" rel="noopener">Bekijk MATRIX E.I.L.</a>
+    </div>
+  </div>
+</section>
+
 <section class="section story dark">
   <div class="wrap two">
     <div class="story-copy">
-      {eyebrow('04', 'Ons verhaal')}
+      {eyebrow('05', 'Ons verhaal')}
       <h2 class="display reveal">Een familie<br>met een <em>vak.</em></h2>
       <p class="lead reveal">Het begon met een winkel in Bocholtz en speakers die we zelf bouwden. Meer dan 50 jaar later staan we nog steeds met dezelfde mentaliteit op elk event: vakmanschap, betrokkenheid en aandacht voor elk detail.</p>
       <a class="btn ghost reveal" href="over.html">Lees ons verhaal</a>
@@ -411,7 +443,7 @@ def home():
 <section class="section">
   <div class="wrap">
     <div class="sec-head row">
-      <div>{eyebrow('05', 'Projecten')}
+      <div>{eyebrow('06', 'Projecten')}
       <h2 class="display reveal">Waar we<br><em>trots op zijn.</em></h2></div>
       <a class="link-arrow reveal" href="projecten.html">Alle projecten</a>
     </div>
@@ -423,7 +455,7 @@ def home():
 <section class="section values">
   <div class="wrap">
     <div class="sec-head">
-      {eyebrow('06', 'Waar je op kunt rekenen')}
+      {eyebrow('07', 'Waar je op kunt rekenen')}
       <h2 class="display reveal">Wat een familiebedrijf<br><em>anders maakt.</em></h2>
     </div>
     <div class="val-grid">
@@ -438,7 +470,7 @@ def home():
 <section class="section faq">
   <div class="wrap two">
     <div>
-      {eyebrow('07', 'Veelgestelde vragen')}
+      {eyebrow('08', 'Veelgestelde vragen')}
       <h2 class="display reveal">Goed om<br><em>te weten.</em></h2>
     </div>
     <div class="faq-list">{faq}</div>
@@ -520,11 +552,6 @@ def over():
     <div class="people">
       <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>LF</span></div><figcaption><b>Leon Franzen</b><span>Eigenaar en eindverantwoordelijke</span><p>Leon kent het vak van binnen en buiten en houdt het overzicht over elke productie. Bij hem weet je waar je aan toe bent.</p></figcaption></figure>
       <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>FF</span></div><figcaption><b>Fenno Franzen</b><span>Volgende generatie · MATRIX E.I.L. en ARGUS Systems</span><p>Fenno ging van jongs af aan mee naar events en bouwde zijn eigen bedrijven in licht, visuals en showtechniek. Hij zet het familiebedrijf voort.</p></figcaption></figure>
-    </div>
-    <div class="crew reveal">
-      <div><b>8+</b><span>mensen bij de opbouw van een groot event, zoals het jubileum van Sportclub’25</span></div>
-      <div><b>3</b><span>vaste krachten tijdens de show: FOH audio, FOH licht en backstage</span></div>
-      <div><b>Eigen</b><span>materiaal: we draaien bijna alles met spullen die we door en door kennen</span></div>
     </div>
     </div>
   </div>
@@ -624,7 +651,7 @@ def project(p):
 
 # ---------------------------------------------------------------- Contact
 def contact():
-    actie = f'mailto:{MAIL}' if MAIL else ''
+    actie = 'https://api.web3forms.com/submit' if FORM_KEY else f'mailto:{MAIL}'
     body = f'''<section class="page-hero contact-hero">
   <div class="wrap two">
     <div>
@@ -633,7 +660,8 @@ def contact():
       <p class="lead reveal">Vertel ons wat je van plan bent. Je hoeft nog niet alles te weten, daar helpen we je juist bij. Je krijgt snel een persoonlijke reactie van de familie.</p>
       {contact_list()}
     </div>
-    <form class="quote-form reveal" data-mail="{MAIL}" action="{actie}" method="post" enctype="text/plain">
+    <form class="quote-form reveal" data-mail="{MAIL}" data-key="{FORM_KEY}" action="{actie}" method="post">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <fieldset class="chips"><legend>Wat organiseer je?</legend>{"".join(f'<label><input type="radio" name="type" value="{e["id"]}"{" checked" if i == 0 else ""}><span>{e["label"]}</span></label>' for i, e in enumerate(EVENTS))}</fieldset>
       <fieldset class="chips"><legend>Waar heb je ons voor nodig?</legend>{"".join(f'<label><input type="checkbox" name="nodig" value="{d["titel"]}"><span>{d["titel"]}</span></label>' for d in DIENSTEN)}</fieldset>
       <div class="row2"><label>Datum<input type="date" name="datum"></label><label>Aantal gasten<input type="number" name="gasten" min="0" inputmode="numeric" placeholder="bijv. 500"></label></div>
