@@ -25,7 +25,7 @@ MATRIX = 'https://fenno03-web.github.io/matrix-eil-site/'
 FONTS = ('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900'
          '&family=Inter:wght@400;500;600&display=swap')
 
-NAV = [('diensten.html', 'Diensten'), ('projecten.html', 'Projecten'), ('over.html', 'Ons verhaal'), ('werkwijze.html', 'Werkwijze')]
+NAV = [('diensten.html', 'Diensten'), ('evenementen.html', 'Evenementen'), ('projecten.html', 'Projecten'), ('over.html', 'Ons verhaal')]
 CURRENT = 'index.html'
 
 
@@ -125,8 +125,8 @@ TIJDLIJN = [
      'Optochten, sportvelden en evenementen in de hele regio. Met onze omroepinstallaties en 100V-systemen bouwden we een naam op voor betrouwbaarheid.'),
     ('Groeien', 'Licht, stroom en complete producties',
      'Het aanbod groeide mee met de events. Licht, aggregaten en complete producties kwamen erbij, voor festivals, bruiloften, verenigingen en bedrijven.'),
-    ('Vandaag', 'Leon en de volgende generatie',
-     'Leon Franzen staat aan het roer. Zoon Fenno groeide op tussen de kabels en brengt met zijn eigen bedrijven MATRIX E.I.L. en ARGUS Systems nieuwe energie mee. Dezelfde betrokkenheid, met de techniek van nu.'),
+    ('Vandaag', 'De volgende generatie',
+     'Het bedrijf is nog altijd in handen van de familie. De volgende generatie groeide op tussen de kabels en brengt met de eigen bedrijven MATRIX E.I.L. en ARGUS Systems nieuwe energie mee. Dezelfde betrokkenheid, met de techniek van nu.'),
 ]
 
 FAQ = [
@@ -146,6 +146,215 @@ STAPPEN = [
     ('Afbouw en evaluatie', 'Na afloop ruimen we alles netjes op. En we horen graag hoe het was, zodat de volgende editie nog beter wordt.'),
 ]
 
+# Eigen pagina per dienst, gekoppeld via 'slug' aan DIENSTEN
+DIENST_PAGINAS = {
+    'geluid': {
+        'pagina': 'geluid.html',
+        'seo': ('Geluid huren in Limburg | Geluidstechniek voor events | GTF Franzen',
+                'Geluid huren met eigen technici voor festivals, feesten, bruiloften en bedrijfsevents in Zuid-Limburg, België en Duitsland. Familiebedrijf uit Bocholtz, eigen materiaal.'),
+        'h1': 'Geluid voor<br>events in <em>Limburg.</em>',
+        'sub': 'Geluidsverhuur met eigen technici · Waar het ooit begon',
+        'intro': 'Met geluid is GTF Franzen ooit begonnen: met verhuur en speakers die we zelf bouwden. Vandaag leveren we geluid voor een speech in een zaal tot een volle festivalwei. Altijd met eigen materiaal en eigen mensen, die het systeem afstemmen op de ruimte, het publiek en wat er op het podium gebeurt.',
+        'krijg': ['Geluidssysteem op maat van zaal, tent of open lucht', 'Mengtafel met bediening door onze eigen technicus', 'Podium- en monitorgeluid voor bands en artiesten', 'Draadloze microfoons voor speech en presentatie', 'Opbouw, soundcheck en afbouw', 'Rekening houden met geluidsnormen en omwonenden'],
+        'aanpak': [('Afgestemd op de plek', 'Een tent klinkt anders dan een sporthal of een weiland. We kiezen het systeem en de opstelling op basis van de ruimte en het aantal mensen, zodat het overal goed klinkt en niet alleen vooraan.'),
+                   ('Verstaanbaar én vol', 'Een speech moet je verstaan, een band moet je voelen. We zorgen voor allebei: heldere spraak en een vol geluid, zonder dat het pijn doet aan je oren.'),
+                   ('Mensen achter de knoppen', 'Onze technicus staat achter de mengtafel en kent het materiaal door en door. Verandert er iets in het programma, dan schakelen we gewoon mee.')],
+        'fotos': ['geluid.jpg', 'tent.jpg', 'zaal.jpg'],
+        'events': ['festival', 'feest', 'bedrijf', 'dorpsfeest'],
+        'projecten': ['sportclub-jubileum', 'woeesj-stock'],
+        'faq': [('Komt er een technicus mee?', 'Bij bands, grotere feesten en events staat er altijd een technicus van ons bij. Zo weet je zeker dat het goed klinkt en hoef je zelf niet aan de knoppen te zitten. Voor kleinere toepassingen bespreken we samen wat handig is.'),
+                ('Kunnen jullie geluid voor een band of artiest regelen?', 'Ja. We verzorgen podium- en monitorgeluid en stemmen vooraf af met de technische wensen van de artiesten.'),
+                ('Wat kost geluid huren?', 'Dat hangt af van de locatie, het aantal gasten en het programma. Je krijgt altijd een vrijblijvende offerte op maat.')],
+    },
+    'licht': {
+        'pagina': 'licht.html',
+        'seo': ('Lichttechniek en lichtshow voor events | GTF Franzen en MATRIX E.I.L.',
+                'Sfeerverlichting, lichtontwerp en lichtshows voor festivals, feesten en bedrijfsevents. GTF Franzen werkt samen met MATRIX E.I.L., bekend van grote festivals en clubshows.'),
+        'h1': 'Licht dat<br>je event <em>maakt.</em>',
+        'sub': 'Sfeerverlichting, lichtshows en visuals · Samen met MATRIX E.I.L.',
+        'intro': 'Licht bepaalt hoe je event voelt, en hoe het eruitziet op elke foto en video. Voor licht en visuals werken we samen met MATRIX E.I.L., het lichtbedrijf uit onze eigen familie dat draait op grote festivals en clubshows. Die kennis van de grote podia nemen we mee naar jouw dorpsfeest, jubileum of bedrijfsevent.',
+        'krijg': ['Sfeerverlichting voor zaal, tent en buitenlocatie', 'Lichtontwerp en voorprogrammering', 'Moving heads, LED en effecten', 'CO2, confetti en andere showeffecten', 'Visuals en LED-schermen', 'Live bediening tijdens de show'],
+        'aanpak': [('Eerst de sfeer', 'We beginnen niet bij de lampen, maar bij het gevoel dat je wilt neerzetten. Warm en gezellig, strak en zakelijk of een volle festivalshow.'),
+                   ('Vooraf ontworpen', 'Bij grotere shows ontwerpt MATRIX het licht vooraf en wordt de show voorgeprogrammeerd. Op de dag zelf is er dan tijd voor de details.'),
+                   ('Live op de muziek', 'Tijdens de show staat er iemand achter de lichttafel die meegaat met de muziek en het programma. Geen standaardprogramma op de achtergrond.')],
+        'fotos': ['licht.jpg', 'rig-rood.jpg', 'gala.jpg'],
+        'events': ['festival', 'vereniging', 'bedrijf', 'feest'],
+        'projecten': ['sportclub-jubileum', 'woeesj-stock'],
+        'faq': [('Wat is MATRIX E.I.L.?', 'MATRIX E.I.L. is het licht- en showbedrijf uit de familie Franzen. MATRIX werkt op grote festivals en clubshows en verzorgt bij GTF Franzen het lichtontwerp, de visuals en de show. Voor jou blijft er één aanspreekpunt.'),
+                ('Kunnen jullie ook alleen sfeerverlichting leveren?', 'Ja. Niet elk event heeft een lichtshow nodig. Soms is warme sfeerverlichting in een zaal of tent precies genoeg.'),
+                ('Leveren jullie ook LED-schermen en visuals?', 'Ja. Samen met MATRIX E.I.L. leveren we LED-schermen en maken we visuals die passen bij je event.')],
+    },
+    'omroep': {
+        'pagina': 'omroep-100v.html',
+        'seo': ('Omroepinstallatie huren | 100V-omroep voor events | GTF Franzen',
+                'Omroepinstallaties en 100V-systemen voor schuttersfeesten, wielerkoersen, optochten en grote terreinen. Bekend van het Oud Limburgs Schuttersfeest en de Amstel Gold Race.'),
+        'h1': 'Omroep die<br>overal <em>aankomt.</em>',
+        'sub': '100V-omroep en hoorns · Bekend van het OLS en de Amstel Gold Race',
+        'intro': 'Omroep is waar GTF Franzen in Limburg al generaties om bekendstaat. Je herkent ons aan de hoorns met FRANZEN BOCHOLTZ erop. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140, langs de Amstel Gold Race hangen ze langs het parcours. Over een groot terrein of een lange route zorgen we dat iedereen hoort wat er gezegd wordt.',
+        'krijg': ['100V-omroep over grote afstanden', 'Hoorns op masten, palen en gebouwen', 'Omroep voor jurywagens en mobiele omroep', 'Omroep voor optochten en wielerkoersen', 'Microfoons voor speaker en presentator', 'Advies over de opzet vooraf'],
+        'aanpak': [('Waarom 100V?', 'Met een 100V-systeem sluit je veel hoorns aan over lange afstanden, zonder dat het geluid wegvalt. Ideaal voor grote terreinen, parcoursen en optochten.'),
+                   ('Het terrein in kaart', 'We kijken vooraf waar het publiek staat en waar de hoorns moeten hangen. Zo is de speaker overal te verstaan, zonder dat het op één plek te hard staat.'),
+                   ('Ook onderweg', 'Met omroep op jurywagens en mobiele omroep reist het geluid mee met de optocht of de koers.')],
+        'fotos': ['amstel-3.jpg', 'masten.jpg', 'ols.jpg'],
+        'events': ['gemeente', 'dorpsfeest', 'festival'],
+        'projecten': ['amstel-gold-race'],
+        'faq': [('Wat is een 100V-omroepinstallatie?', 'Een systeem waarmee je veel luidsprekers of hoorns via lange kabels op één versterker aansluit. Het is betrouwbaar en geschikt voor grote terreinen, routes en gebouwen.'),
+                ('Hoeveel hoorns kunnen jullie plaatsen?', 'Dat hangt af van het terrein. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140. Kleiner kan natuurlijk ook.'),
+                ('Doen jullie ook omroep voor jurywagens?', 'Ja. Op schuttersfeesten zoals het OLS reden diverse jurywagens met onze omroep.')],
+    },
+    'stroom': {
+        'pagina': 'stroom-aggregaten.html',
+        'seo': ('Aggregaat huren voor events | Stroomvoorziening | GTF Franzen',
+                'Aggregaten en stroomverdeling voor festivals, feesttenten en buitenevents in Limburg. Veilige stroom voor podium, bars, koeling en foodtrucks.'),
+        'h1': 'Stroom voor<br>je <em>buitenevent.</em>',
+        'sub': 'Aggregaten en stroomverdeling · Voor tent, terrein en podium',
+        'intro': 'Op een weiland, plein of parkeerplaats begint alles bij stroom. Wij leveren aggregaten en zorgen voor een veilige, overzichtelijke stroomverdeling. Zo blijven geluid, licht, bars, koeling en foodtrucks de hele dag gewoon draaien.',
+        'krijg': ['Aggregaten voor kleine en grote events', 'Stroomverdeling en bekabeling over het terrein', 'Berekening van de stroombehoefte vooraf', 'Aansluitingen voor bars, koeling en foodtrucks', 'Veilige kabelroutes voor publiek', 'Afstemming met andere partijen op het terrein'],
+        'aanpak': [('Eerst rekenen', 'We maken vooraf een overzicht van alles wat stroom nodig heeft. Zo weet je zeker dat er genoeg is en dat er niets uitvalt op het drukste moment.'),
+                   ('Netjes verdeeld', 'Kabels lopen waar ze horen, met verdeelkasten op logische plekken. Veilig voor het publiek en makkelijk voor iedereen die moet aansluiten.'),
+                   ('Eén partij voor alles', 'Omdat wij ook het geluid en licht doen, is alles op elkaar afgestemd. Geen discussie over wie verantwoordelijk is als er iets niet werkt.')],
+        'fotos': ['stroom.jpg', 'tent.jpg', 'ols.jpg'],
+        'events': ['festival', 'dorpsfeest', 'vereniging'],
+        'projecten': ['sportclub-jubileum'],
+        'faq': [('Hoe weet ik hoeveel stroom ik nodig heb?', 'Dat rekenen wij voor je uit. Geef door wat er op je terrein komt, zoals podium, bars, koeling en foodtrucks, dan bepalen we welk aggregaat en welke verdeling nodig is.'),
+                ('Kunnen andere partijen op jullie stroom aansluiten?', 'Ja. We zorgen voor aansluitpunten voor bijvoorbeeld bars, cateraars en foodtrucks, en stemmen af wie wat nodig heeft.'),
+                ('Kan ik alleen stroom bij jullie afnemen?', 'Dat kan. Maar het werkt vaak het prettigst als stroom, geluid en licht uit één hand komen.')],
+    },
+    'productie': {
+        'pagina': 'eventproductie.html',
+        'seo': ('Complete eventproductie in Limburg | Eén technische partner | GTF Franzen',
+                'Complete technische productie voor festivals, jubilea en bedrijfsevents: geluid, licht, stroom, omroep en podium uit één hand, met één aanspreekpunt.'),
+        'h1': 'Je hele productie,<br><em>één partner.</em>',
+        'sub': 'Geluid, licht, stroom en omroep uit één hand',
+        'intro': 'De kracht van GTF Franzen zit in het geheel. Geluid, licht, stroom, omroep en podiumtechniek komen bij ons uit één hand, met bijna volledig eigen materiaal en één aanspreekpunt. Je hoeft niet te schakelen tussen vijf leveranciers. Wij denken mee, plannen alles op elkaar af en staan er op de dag zelf.',
+        'krijg': ['Eén aanspreekpunt voor alle techniek', 'Technische planning en draaiboek', 'Geluid, licht, stroom en omroep op elkaar afgestemd', 'Lichtontwerp en show met MATRIX E.I.L.', 'Afstemming met artiesten, catering en locatie', 'Opbouw, show en afbouw door onze eigen crew'],
+        'aanpak': [('Samen plannen', 'We beginnen bij je programma en je locatie. Daaruit volgt wat er nodig is, wanneer het moet staan en wie wat doet.'),
+                   ('Alles past op elkaar', 'Omdat alles van ons komt, past alles op elkaar. Van stroom en kabelroutes tot het moment waarop licht en geluid samen de show inzetten.'),
+                   ('Op de dag zelf', 'Onze crew bouwt op, test alles en staat klaar tijdens het event: bij de mengtafel, bij de lichttafel en backstage.')],
+        'fotos': ['proj/sportclub-jubileum/01.jpg', 'beurs.jpg', 'rig-groen.jpg'],
+        'events': ['festival', 'vereniging', 'bedrijf'],
+        'projecten': ['sportclub-jubileum', 'woeesj-stock'],
+        'faq': [('Waarom alles bij één partij?', 'Eén partij betekent één planning, één aanspreekpunt en geen discussie over wie waarvoor verantwoordelijk is. Dat scheelt je tijd, overleg en stress.'),
+                ('Werken jullie met de technische wensen van artiesten?', 'Ja. We stemmen vooraf af met de artiesten en hun technici, zodat alles klaarstaat wat ze nodig hebben.'),
+                ('Komen jullie vooraf naar de locatie?', 'Bij grotere producties komen we graag langs. Zo weten we precies waar podium, stroom en techniek moeten komen.')],
+    },
+}
+
+# Eigen pagina per soort event, gekoppeld via 'id' aan EVENTS
+EVENT_PAGINAS = {
+    'festival': {
+        'pagina': 'festival.html',
+        'seo': ('Festivaltechniek in Limburg | Geluid, licht en stroom | GTF Franzen',
+                'Geluid, licht, stroom en omroep voor festivals in Zuid-Limburg, België en Duitsland. Alle podia op elkaar afgestemd, met één aanspreekpunt.'),
+        'h1': 'Techniek voor<br>je <em>festival.</em>',
+        'sub': 'Podia, omroep en stroom over het hele terrein',
+        'intro': 'Meerdere podia, wisselende artiesten en duizenden bezoekers. Op een festival moet alles kloppen, en het moet op elkaar aansluiten. Wij plannen de techniek van alle stages, het terrein en de stroom als één geheel en houden het overzicht, van het eerste overleg tot de laatste act.',
+        'aanpak': [('Alle podia op elkaar afgestemd', 'Elk podium krijgt het geluid en licht dat bij de acts past, zonder dat de stages elkaar in de weg zitten.'),
+                   ('Het hele terrein', 'Stroom voor bars en foodtrucks, omroep voor mededelingen en verlichting voor looproutes. Ook dat hoort bij een festival dat klopt.'),
+                   ('Een show om te onthouden', 'Met MATRIX E.I.L. ontwerpen we een lichtshow met effecten, CO2 en confetti die past bij je line-up.')],
+        'fotos': ['proj/sportclub-jubileum/28.jpg', 'hero.jpg', 'rig-rood.jpg'],
+        'diensten': ['geluid', 'licht', 'stroom', 'productie'],
+        'projecten': ['woeesj-stock', 'sportclub-jubileum'],
+        'faq': [('Kunnen jullie meerdere podia tegelijk verzorgen?', 'Ja. We plannen de techniek van alle podia samen, zodat alles op elkaar aansluit en je één aanspreekpunt hebt.'),
+                ('Regelen jullie ook stroom voor het hele terrein?', 'Ja. We leveren aggregaten en stroomverdeling voor podia, bars, koeling en foodtrucks.'),
+                ('Hoe vroeg moeten we beginnen met plannen?', 'Voor een festival het liefst ruim van tevoren, zeker in het zomerseizoen. Dan is er tijd om de locatie te bekijken en alles goed voor te bereiden.')],
+    },
+    'dorpsfeest': {
+        'pagina': 'dorpsfeest-carnaval.html',
+        'seo': ('Geluid en licht voor dorpsfeest, kermis en carnaval | GTF Franzen',
+                'Techniek voor dorpsfeesten, kermis, carnaval en feesttenten in Zuid-Limburg. Tentgeluid, sfeerlicht, omroep voor optochten en stroom.'),
+        'h1': 'Het hele dorp<br>op de <em>been.</em>',
+        'sub': 'Kermis, carnaval, schuttersfeest en feesttent',
+        'intro': 'Kermis, carnaval, een schuttersfeest of een avond in de feesttent. We komen zelf uit een Limburgs dorp en kennen de verenigingen, de locaties en de tradities. We weten wat er nodig is om er een avond van te maken waar nog lang over gepraat wordt.',
+        'aanpak': [('Tent of zaal vol sfeer', 'Geluid dat de hele tent vult en sfeerlicht dat er warm uitziet, of het nu een middag voor jong en oud is of een avond tot in de late uurtjes.'),
+                   ('Optocht en buitenprogramma', 'Met omroep langs de route en op het plein hoort iedereen wat er gebeurt, ook achteraan de optocht.'),
+                   ('Snel schakelen', 'Verandert het programma? Komt er een extra act bij? Wij staan erbij en schakelen gewoon mee.')],
+        'fotos': ['proj/woeesj-stock/01.jpg', 'tent.jpg', 'zaal.jpg'],
+        'diensten': ['geluid', 'licht', 'omroep', 'stroom'],
+        'projecten': ['woeesj-stock', 'sportclub-jubileum'],
+        'faq': [('Verzorgen jullie ook carnavalszittingen?', 'Ja. Voor zittingen en feesten in zalen en tenten leveren we geluid, licht en waar nodig een podium.'),
+                ('Kunnen jullie omroep voor een optocht regelen?', 'Ja. Omroep is een van onze specialiteiten. We zorgen dat de speaker langs de route en op het plein goed te verstaan is.'),
+                ('Werken jullie ook met een beperkt budget?', 'Ja. Vertel ons wat je wilt en wat je budget is, dan denken we mee over wat haalbaar is.')],
+    },
+    'feest': {
+        'pagina': 'bruiloft-feest.html',
+        'seo': ('Geluid en licht voor je bruiloft of feest in Limburg | GTF Franzen',
+                'Microfoons voor ceremonie en speeches, geluid voor band of dj en sfeerverlichting voor je bruiloft of feest. Familiebedrijf uit Bocholtz.'),
+        'h1': 'Jullie dag,<br><em>zonder zorgen.</em>',
+        'sub': 'Bruiloften, verjaardagen en besloten feesten',
+        'intro': 'Van de ceremonie en de speeches tot de band en de dansvloer. Op zo’n dag wil je niet nadenken over kabels en microfoons. Wij zorgen dat alles klinkt en er mooi uitziet, en dat de techniek klaarstaat voordat de eerste gast binnenkomt. Jullie hoeven alleen maar te genieten.',
+        'aanpak': [('Ceremonie en speeches', 'Draadloze microfoons die gewoon werken, zodat iedereen het jawoord en elke speech goed verstaat.'),
+                   ('Band of dj', 'Geluid dat past bij de zaal en het aantal gasten. Vol op de dansvloer, prettig aan tafel.'),
+                   ('Sfeer in de zaal', 'Sfeerverlichting die de ruimte warm maakt en zorgt voor mooie foto’s, van het diner tot de laatste dans.')],
+        'fotos': ['zaal.jpg', 'gala.jpg', 'zaal-2.jpg'],
+        'diensten': ['geluid', 'licht'],
+        'projecten': [],
+        'faq': [('Zijn jullie er de hele avond bij?', 'Dat stemmen we samen af. Bij een band of een uitgebreid programma blijft er een technicus. Bij een eenvoudiger opzet bouwen we op, testen we alles en spreken we af wanneer we terugkomen.'),
+                ('Kunnen jullie ook op een buitenlocatie opbouwen?', 'Ja. Op een buitenlocatie regelen we ook de stroom, zodat je niet afhankelijk bent van wat er op de locatie aanwezig is.'),
+                ('Wanneer moeten we boeken?', 'Hoe eerder hoe beter, zeker voor zaterdagen in het trouwseizoen.')],
+    },
+    'bedrijf': {
+        'pagina': 'bedrijfsevent.html',
+        'seo': ('Techniek voor bedrijfsevents en congressen | AV in Limburg | GTF Franzen',
+                'Geluid, licht en techniek voor congressen, presentaties, personeelsfeesten en beurzen in Limburg en omgeving. Strak, professioneel en op tijd.'),
+        'h1': 'Strak, zakelijk<br>en <em>op tijd.</em>',
+        'sub': 'Congressen, presentaties, personeelsfeesten en beurzen',
+        'intro': 'Een congres, presentatie, personeelsfeest, beurs of productlancering. De techniek moet gewoon werken en de boodschap moet aankomen. Wij zorgen voor heldere spraak, passend licht en een soepel verloop, en bouwen op en af zonder dat je er last van hebt.',
+        'aanpak': [('De boodschap komt aan', 'Heldere spraak tot achter in de zaal en draadloze microfoons voor sprekers en panels.'),
+                   ('Uitstraling die past', 'Podium- en sfeerverlichting en desgewenst LED-schermen in de stijl van je bedrijf of merk.'),
+                   ('Regie tijdens het programma', 'Een technicus volgt het draaiboek, zodat elke spreker, video en overgang op het juiste moment komt.')],
+        'fotos': ['gala.jpg', 'beurs.jpg', 'gebouw.jpg'],
+        'diensten': ['geluid', 'licht', 'productie'],
+        'projecten': [],
+        'faq': [('Kunnen jullie buiten kantoortijden opbouwen?', 'Ja. We stemmen de opbouw af op de locatie en je programma, ook vroeg in de ochtend of de avond ervoor.'),
+                ('Leveren jullie ook schermen voor presentaties?', 'Ja. Samen met MATRIX E.I.L. leveren we LED-schermen en zorgen we dat je presentaties goed in beeld komen.'),
+                ('Werken jullie ook over de grens?', 'Ja. We werken in Nederland, België en Duitsland.')],
+    },
+    'vereniging': {
+        'pagina': 'vereniging-jubileum.html',
+        'seo': ('Techniek voor jubileum en verenigingsfeest | GTF Franzen',
+                'Een jubileum, lustrum of concert voor je vereniging? GTF Franzen verzorgt de complete productie met geluid, licht, show en stroom. Bekend van Sportclub’25 100 jaar.'),
+        'h1': 'Een jubileum<br>om <em>nooit</em> te vergeten.',
+        'sub': 'Jubilea, lustra, concerten en verenigingsfeesten',
+        'intro': 'Honderd jaar sportclub, een lustrum van de schutterij of een bijzonder concert van de harmonie. Voor zo’n moment wil je techniek die het verhaal van je vereniging groot maakt. Daar denken we graag in mee, ook met een beperkt budget. Voor Sportclub’25 in Bocholtz zetten we zo een productie neer waar het dorp nog over praat.',
+        'aanpak': [('Het verhaal van je club', 'We denken mee over hoe je jubileum eruit moet zien en wat er op het programma staat, en vertalen dat naar techniek.'),
+                   ('Een echte show', 'Met licht, effecten en visuals van MATRIX E.I.L. krijgt je jubileum de uitstraling van een groot podium.'),
+                   ('Binnen je budget', 'Verenigingen werken vaak met vrijwilligers en een vast budget. We zijn eerlijk over wat er kan en wat het kost.')],
+        'fotos': ['proj/sportclub-jubileum/14.jpg', 'proj/sportclub-jubileum/01.jpg', 'rig-staand.jpg'],
+        'diensten': ['productie', 'geluid', 'licht', 'stroom'],
+        'projecten': ['sportclub-jubileum'],
+        'faq': [('Kunnen jullie een tent of zaal volledig aankleden?', 'Ja. Van geluid en licht tot stroom en podiumtechniek: we verzorgen de complete productie.'),
+                ('Kunnen vrijwilligers van onze club helpen?', 'Zeker. We stemmen vooraf af wie wat doet, zodat iedereen weet waar hij of zij aan toe is.'),
+                ('Wat deden jullie bij Sportclub’25?', 'Voor het honderdjarig bestaan van Sportclub’25 in Bocholtz verzorgden we de productie en techniek, met lichtontwerp, visuals en show door MATRIX E.I.L.')],
+    },
+    'gemeente': {
+        'pagina': 'schuttersfeest-omroep.html',
+        'seo': ('Omroep voor schuttersfeesten, wielerkoersen en grote terreinen | GTF Franzen',
+                'Omroep op 100V voor schuttersfeesten, wielerkoersen, herdenkingen en markten. Meer dan 140 hoorns op het Oud Limburgs Schuttersfeest, omroep langs de Amstel Gold Race.'),
+        'h1': 'Iedereen hoort het.<br><em>Overal.</em>',
+        'sub': 'Schuttersfeesten, wielerkoersen, herdenkingen en markten',
+        'intro': 'Op een groot terrein of langs een lange route moet iedereen kunnen horen wat er gebeurt. Op het Oud Limburgs Schuttersfeest hingen meer dan 140 hoorns van ons op 100V en reden diverse jurywagens met onze omroep. Langs het parcours van de Amstel Gold Race hoort het publiek dankzij ons wat er in de koers gebeurt.',
+        'aanpak': [('Groot terrein, één geluid', 'Hoorns op de juiste plekken, zodat de speaker overal te verstaan is, van de tribune tot achter op het terrein.'),
+                   ('Langs de route', 'Bij koersen en optochten volgt de omroep de route, met hoorns langs het parcours en mobiele omroep waar nodig.'),
+                   ('Ervaring van generaties', 'Omroep is waar we groot mee zijn geworden. We weten wat werkt bij wind, regen en duizenden mensen.')],
+        'fotos': ['ols.jpg', 'amstel-1.jpg', 'masten.jpg'],
+        'diensten': ['omroep', 'stroom', 'geluid'],
+        'projecten': ['amstel-gold-race'],
+        'faq': [('Kunnen jullie een heel schuttersfeest van omroep voorzien?', 'Ja. Op het Oud Limburgs Schuttersfeest hingen meer dan 140 hoorns van ons en reden diverse jurywagens met onze omroep.'),
+                ('Doen jullie ook omroep bij wielerwedstrijden?', 'Ja. Langs het parcours van de Amstel Gold Race verzorgen wij de omroep.'),
+                ('Werken jullie ook voor gemeenten?', 'Ja. Voor herdenkingen, markten en andere evenementen in de openbare ruimte leveren we omroep en geluid.')],
+    },
+}
+
+# Werkgebied: (naam, lengtegraad, breedtegraad, land)
+PLAATSEN = [
+    ('Bocholtz', 6.005, 50.818, 'NL'), ('Simpelveld', 5.982, 50.834, 'NL'), ('Kerkrade', 6.063, 50.866, 'NL'), ('Heerlen', 5.981, 50.888, 'NL'),
+    ('Landgraaf', 6.03, 50.905, 'NL'), ('Brunssum', 5.97, 50.947, 'NL'), ('Valkenburg', 5.832, 50.865, 'NL'), ('Gulpen', 5.889, 50.815, 'NL'),
+    ('Vaals', 6.019, 50.771, 'NL'), ('Maastricht', 5.69, 50.851, 'NL'), ('Sittard', 5.869, 50.998, 'NL'),
+    ('Aken', 6.083, 50.776, 'DE'), ('Herzogenrath', 6.094, 50.87, 'DE'), ('Eschweiler', 6.27, 50.817, 'DE'),
+    ('Kelmis', 6.0, 50.716, 'BE'), ('Eupen', 6.036, 50.63, 'BE'), ('Voeren', 5.79, 50.75, 'BE'), ('Tongeren', 5.464, 50.781, 'BE'),
+]
+
 
 # ---------------------------------------------------------------- Onderdelen
 RINGS = [(702, 12), (625, 21), (548, 30), (471, 38), (393, 50)]
@@ -163,6 +372,15 @@ def mark(cls='mark', small=False):
 def cover_of(p):
     return f'assets/img/{p["cover"]}' if 'cover' in p else f'assets/img/proj/{p["map"]}/cover.jpg'
 
+
+def ring_txt(pid):
+    return (f'<svg class="ring-txt" viewBox="0 0 1500 1500"><defs><path id="{pid}" d="M750 750m-560 0a560 560 0 1 1 1120 0a560 560 0 1 1-1120 0"/></defs>'
+            f'<text><textPath href="#{pid}" textLength="3480" lengthAdjust="spacing">FRANZEN · BOCHOLTZ · SOUND · LIGHT · VISION ·</textPath></text></svg>')
+
+TICKER = ''.join(f'<span>{t}</span>' for t in ('Oud Limburgs Schuttersfeest', 'Amstel Gold Race', 'Sportclub’25', 'Woeësj-Stock', 'Carnaval', 'Kermis', 'Bruiloften', 'Congressen', 'Jubilea', 'Optochten'))
+CUES = ''.join(f'<li><span class="cue-nr">CUE {i:02d}</span><b>{t}</b><span>{w}</span></li>' for i, (t, w) in enumerate([
+    ('Oud Limburgs Schuttersfeest', '140+ hoorns en jurywagens'), ('Amstel Gold Race', 'Omroep langs het parcours'),
+    ('Sportclub’25, 100 jaar', 'Complete productie'), ('Woeësj-Stock', 'Festival in de feesttent')], 1))
 
 LOGO = mark('logo-mark', small=True) + '<span class="logo-txt"><b>GTF Franzen</b><small>Sound · Light · Vision</small></span>'
 
@@ -197,9 +415,9 @@ def head(title, desc, image='assets/img/og.jpg', ld=None):
 </head>'''
 
 
-def header(current, dark=True):
+def header(current, dark=True, sectie=None):
     cur = ' aria-current="page"'
-    links = ''.join(f'<a href="{href}"{cur if href == current else ""}>{label}</a>' for href, label in NAV)
+    links = ''.join(f'<a href="{href}"{cur if href in (current, sectie) else ""}>{label}</a>' for href, label in NAV)
     return f'''<a class="skip" href="#main">Naar de inhoud</a>
 <header class="site-header{' on-dark' if dark else ''}">
   <div class="wrap">
@@ -235,15 +453,19 @@ def footer(extra_js=''):
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="logo" href="index.html" aria-label="GTF Franzen home">{LOGO}</a>
-        <p>Geluid, licht, omroep, stroom en complete producties. Al meer dan 50 jaar uit Bocholtz.</p>
+        <p>Geluid, licht, omroep, stroom en complete producties. Familiebedrijf uit Bocholtz, al meer dan 50 jaar.</p>
       </div>
       <div>
         <h4>Diensten</h4>
-        <ul>{''.join(f'<li><a href="diensten.html#{d["slug"]}">{d["titel"]}</a></li>' for d in DIENSTEN)}</ul>
+        <ul>{''.join(f'<li><a href="{DIENST_PAGINAS[d["slug"]]["pagina"]}">{d["titel"]}</a></li>' for d in DIENSTEN)}</ul>
+      </div>
+      <div>
+        <h4>Evenementen</h4>
+        <ul>{''.join(f'<li><a href="{EVENT_PAGINAS[e["id"]]["pagina"]}">{e["label"]}</a></li>' for e in EVENTS)}</ul>
       </div>
       <div>
         <h4>GTF Franzen</h4>
-        <ul><li><a href="over.html">Ons verhaal</a></li><li><a href="projecten.html">Projecten</a></li><li><a href="werkwijze.html">Werkwijze</a></li><li><a href="contact.html">Contact</a></li><li><a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a></li>{socials}</ul>
+        <ul><li><a href="over.html">Ons verhaal</a></li><li><a href="projecten.html">Projecten</a></li><li><a href="werkwijze.html">Werkwijze</a></li><li><a href="werkgebied.html">Werkgebied</a></li><li><a href="contact.html">Contact</a></li><li><a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a></li>{socials}</ul>
       </div>
       <div>
         <h4>Contact</h4>
@@ -291,10 +513,10 @@ def cta_band():
 </section>'''
 
 
-def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image='assets/img/og.jpg', extra_js=''):
+def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image='assets/img/og.jpg', extra_js='', sectie=None):
     global CURRENT
     CURRENT = name
-    html = (head(title, desc, image=image, ld=ld) + f'\n<body class="{body_cls}">\n' + header(name, dark_header)
+    html = (head(title, desc, image=image, ld=ld) + f'\n<body class="{body_cls}">\n' + header(name, dark_header, sectie)
             + '\n<main id="main">\n' + body + '\n</main>\n' + footer(extra_js))
     (ROOT / name).write_text(html, encoding='utf-8')
     return name
@@ -303,7 +525,7 @@ def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image=
 # ---------------------------------------------------------------- Home
 def home():
     diensten = ''.join(f'''
-      <a class="svc reveal" href="diensten.html#{d["slug"]}">
+      <a class="svc reveal" href="{DIENST_PAGINAS[d["slug"]]["pagina"]}">
         <span class="svc-nr">CH {d["nr"]}</span>
         <svg class="scope" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q 12.5 2 25 20 T 50 20 T 75 20 T 100 20 T 125 20 T 150 20 T 175 20 T 200 20"/></svg>
         <span class="svc-img"><img src="assets/img/{d["img"]}" alt="" loading="lazy"></span>
@@ -321,7 +543,7 @@ def home():
           <p>{e["tekst"]}</p>
           <p class="pane-label">Dit regelen wij voor je</p>
           <ul class="checks">{"".join(f"<li>{r}</li>" for r in e["regelen"])}</ul>
-          <a class="btn fill" href="contact.html?type={e["id"]}">Plan je {e["label"].split(" ")[0].lower()}</a>
+          <div class="btns"><a class="btn fill" href="contact.html?type={e["id"]}">Plan je {e["label"].split(" ")[0].lower()}</a><a class="btn ghost" href="{EVENT_PAGINAS[e["id"]]["pagina"]}">Meer hierover</a></div>
         </div>
       </div>''' for i, e in enumerate(EVENTS))
 
@@ -342,14 +564,16 @@ def home():
 
     body = f'''<section class="hero">
   <div class="hero-media"><img src="assets/img/hero.jpg" alt="Podium met CO2-jets en confetti boven een vol publiek" fetchpriority="high"></div>
-  <div class="hero-waves" aria-hidden="true">{mark('wave-mark')}<i></i><i></i><i></i></div>
+  <div class="hero-waves" aria-hidden="true">{ring_txt('ring-hero')}{mark('wave-mark')}<i></i><i></i><i></i></div>
   <div class="wrap hero-inner">
     <p class="hero-kicker"><span class="dot"></span>Familiebedrijf uit Bocholtz · NL · BE · DE</p>
-    <h1 class="hero-title">Jouw event.<br>Onze <em>familie</em><br>erachter.</h1>
-    <p class="hero-lead">Geluid, licht, stroom en complete producties voor festivals, dorpsfeesten, bruiloften, verenigingen en bedrijven. Al meer dan 50 jaar, met één aanspreekpunt van begin tot eind.</p>
+    <h1 class="hero-title">Al 50 jaar<br>het geluid<br>van <em>Limburg.</em></h1>
+    <p class="hero-lead">Van de omroep op het schuttersfeest tot de show op het festivalpodium. Familiebedrijf GTF Franzen regelt geluid, licht, stroom en complete producties, met eigen materiaal en één aanspreekpunt van begin tot eind.</p>
     <div class="btns"><a class="btn fill" href="contact.html">Vraag een offerte aan</a><a class="btn ghost" href="#evenement">Wat organiseer je?</a></div>
   </div>
 </section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-run">{TICKER}{TICKER}</div></div>
 
 <section class="facts" aria-label="GTF Franzen in cijfers">
   <div class="wrap">
@@ -360,10 +584,22 @@ def home():
   </div>
 </section>
 
+<section class="section herken">
+  <div class="wrap two">
+    <div class="herken-img reveal"><img src="assets/img/amstel-2.jpg" alt="Hoorn met de naam Franzen Bocholtz langs het parcours van de Amstel Gold Race" loading="lazy"><span class="stamp" aria-hidden="true">{ring_txt('ring-stamp')}</span></div>
+    <div>
+      {eyebrow('01', 'Herkenbaar')}
+      <h2 class="display reveal">Zie je deze hoorn?<br><em>Dan zijn wij er.</em></h2>
+      <p class="lead reveal">Op schuttersfeesten, langs de Amstel Gold Race, bij optochten en op sportvelden in heel Limburg hangen hoorns met FRANZEN BOCHOLTZ erop. Al generaties lang. Het is onze naam, dus we zorgen dat het klopt.</p>
+      <ol class="cues reveal">{CUES}</ol>
+    </div>
+  </div>
+</section>
+
 <section class="section intro">
   <div class="wrap two">
     <div>
-      {eyebrow('01', 'Waarom één partner')}
+      {eyebrow('02', 'Waarom één partner')}
       <h2 class="display reveal">Vijf leveranciers?<br><em>Of één familie</em><br>die alles regelt.</h2>
     </div>
     <div class="compare">
@@ -382,7 +618,7 @@ def home():
 <section class="section diensten-home">
   <div class="wrap">
     <div class="sec-head">
-      {eyebrow('02', 'Wat we doen')}
+      {eyebrow('03', 'Wat we doen')}
       <h2 class="display reveal">Alles voor een event<br><em>dat klopt.</em></h2>
     </div>
     <div class="svc-grid">{diensten}
@@ -393,7 +629,7 @@ def home():
 <section class="section picker" id="evenement">
   <div class="wrap">
     <div class="sec-head">
-      {eyebrow('03', 'Voor elk event')}
+      {eyebrow('04', 'Voor elk event')}
       <h2 class="display reveal">Wat ga jij<br><em>organiseren?</em></h2>
     </div>
     <div class="tabs reveal" role="tablist" aria-label="Soort event">{tabs}</div>
@@ -406,9 +642,9 @@ def home():
   <div class="wrap two">
     <div class="matrix-img reveal"><img src="assets/img/licht.jpg" alt="Lichtshow met beams en LED boven een vol publiek" loading="lazy"><span class="matrix-tag">Licht · Video · Sfeer</span></div>
     <div>
-      {eyebrow('04', 'Met MATRIX E.I.L.')}
+      {eyebrow('05', 'Met MATRIX E.I.L.')}
       <h2 class="display reveal">De kennis van<br><em>de grote podia.</em></h2>
-      <p class="lead reveal">Voor licht, video en sfeer werken we samen met MATRIX E.I.L., het bedrijf van Fenno Franzen. MATRIX draait op grote festivals en clubshows als Electrisize, Boiler Room en ParkCity Live.</p>
+      <p class="lead reveal">Voor licht, video en sfeer werken we samen met MATRIX E.I.L., het licht- en showbedrijf uit onze eigen familie. MATRIX draait op grote festivals en clubshows als Electrisize, Boiler Room en ParkCity Live.</p>
       <p class="reveal">Die ervaring nemen we mee naar jouw event. MATRIX kijkt mee naar de sfeer, ontwerpt het licht, maakt visuals en zet LED-schermen neer. Zo krijgt een dorpsfeest, jubileum of bedrijfsevent de uitstraling van een groot podium, en heb jij nog steeds één aanspreekpunt.</p>
       <ul class="checks reveal"><li>Lichtontwerp en voorprogrammering</li><li>Video, visuals en LED-schermen</li><li>Advies over sfeer en beleving</li><li>Live bediening tijdens de show</li></ul>
       <a class="link-arrow reveal" href="{MATRIX}" target="_blank" rel="noopener">Bekijk MATRIX E.I.L.</a>
@@ -419,7 +655,7 @@ def home():
 <section class="section story dark">
   <div class="wrap two">
     <div class="story-copy">
-      {eyebrow('05', 'Ons verhaal')}
+      {eyebrow('06', 'Ons verhaal')}
       <h2 class="display reveal">Een familie<br>met een <em>vak.</em></h2>
       <p class="lead reveal">Het begon met een winkel in Bocholtz en speakers die we zelf bouwden. Meer dan 50 jaar later staan we nog steeds met dezelfde mentaliteit op elk event: vakmanschap, betrokkenheid en aandacht voor elk detail.</p>
       <a class="btn ghost reveal" href="over.html">Lees ons verhaal</a>
@@ -432,37 +668,14 @@ def home():
   </div>
 </section>
 
-<section class="proof">
-  <img src="assets/img/amstel-2.jpg" alt="Hoorn met de naam Franzen Bocholtz naast een vlag van de Amstel Gold Race" loading="lazy">
-  <div class="wrap">
-    <p class="proof-q reveal">Onze naam hangt<br>langs het parcours van<br><em>de Amstel Gold Race.</em></p>
-    <a class="link-arrow reveal" href="project-amstel-gold-race.html">Bekijk het project</a>
-  </div>
-</section>
-
 <section class="section">
   <div class="wrap">
     <div class="sec-head row">
-      <div>{eyebrow('06', 'Projecten')}
+      <div>{eyebrow('07', 'Projecten')}
       <h2 class="display reveal">Waar we<br><em>trots op zijn.</em></h2></div>
       <a class="link-arrow reveal" href="projecten.html">Alle projecten</a>
     </div>
     <div class="proj-grid">{proj}
-    </div>
-  </div>
-</section>
-
-<section class="section values">
-  <div class="wrap">
-    <div class="sec-head">
-      {eyebrow('07', 'Waar je op kunt rekenen')}
-      <h2 class="display reveal">Wat een familiebedrijf<br><em>anders maakt.</em></h2>
-    </div>
-    <div class="val-grid">
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">01</span><h3>Je belt met de familie</h3><p>Geen callcenter of ticketnummer. Je spreekt de mensen die je event ook echt neerzetten.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">02</span><h3>Maatwerk, geen pakket</h3><p>We kijken naar wat jouw event in de praktijk nodig heeft, niet naar wat er op papier staat.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">03</span><h3>Onze naam staat erop</h3><p>Elk event draagt de naam Franzen. Daarom laten we pas los als alles goed staat.</p></div>
-      <div class="val reveal"><span class="val-ic" aria-hidden="true">04</span><h3>Eigen materiaal</h3><p>We werken bijna volledig met eigen materiaal. Dat kennen we door en door, dus we weten precies wat we meenemen en hoe het erbij staat.</p></div>
     </div>
   </div>
 </section>
@@ -494,6 +707,7 @@ def diensten():
       <h2 class="display reveal">{d["kort"]}</h2>
       <p class="lead reveal">{d["tekst"]}</p>
       <ul class="checks reveal">{"".join(f"<li>{p}</li>" for p in d["punten"])}</ul>
+      <a class="btn ghost reveal" href="{DIENST_PAGINAS[d["slug"]]["pagina"]}">Alles over {d["titel"].lower()}</a>
     </div>
   </div>
 </section>''' for i, d in enumerate(DIENSTEN))
@@ -546,13 +760,11 @@ def over():
 </section>
 
 <section class="section family">
-  <div class="wrap">
-    <div class="sec-head">{eyebrow('03', 'De mensen')}<h2 class="display reveal">Het gezicht<br><em>achter je event.</em></h2>
-    <p class="lead reveal">Bij ons spreek je niet met een afdeling, maar met de familie. Dezelfde mensen die je voorstel maken, staan op de dag zelf naast het podium.</p></div>
-    <div class="people">
-      <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>LF</span></div><figcaption><b>Leon Franzen</b><span>Eigenaar en eindverantwoordelijke</span><p>Leon kent het vak van binnen en buiten en houdt het overzicht over elke productie. Bij hem weet je waar je aan toe bent.</p></figcaption></figure>
-      <figure class="person reveal"><div class="person-img mono" aria-hidden="true"><span>FF</span></div><figcaption><b>Fenno Franzen</b><span>Volgende generatie · MATRIX E.I.L. en ARGUS Systems</span><p>Fenno ging van jongs af aan mee naar events en bouwde zijn eigen bedrijven in licht, visuals en showtechniek. Hij zet het familiebedrijf voort.</p></figcaption></figure>
-    </div>
+  <div class="wrap two">
+    <div>{eyebrow('03', 'De familie')}<h2 class="display reveal">Je belt niet<br>met een <em>afdeling.</em></h2></div>
+    <div>
+      <p class="lead reveal">Bij GTF Franzen spreek je met de familie. Dezelfde mensen die je voorstel maken, staan op de dag zelf naast het podium. Geen callcenter, geen ticketnummer en geen gedoe over wie waarvoor verantwoordelijk is.</p>
+      <ul class="checks reveal"><li>Al generaties in handen van de familie Franzen</li><li>Bijna volledig eigen materiaal, dat we door en door kennen</li><li>Eigen crew voor opbouw, show en afbouw</li><li>Licht en show door MATRIX E.I.L., ook uit de familie</li></ul>
     </div>
   </div>
 </section>
@@ -562,7 +774,7 @@ def over():
     <div>{eyebrow('04', 'Hoe we werken')}<h2 class="display reveal">Persoonlijk,<br><em>no-nonsense.</em></h2></div>
     <div>
       <p class="lead reveal">Persoonlijk contact, open communicatie en eerlijke samenwerking. Korte lijnen en een nuchtere aanpak. Een project moet bij ons niet alleen goed klinken of werken, het moet ook goed voelen.</p>
-      <p class="reveal">Daarom kiezen we nooit voor een standaardoplossing, maar voor wat bij jouw event past. En voor licht en visuals werken we samen met <a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a>, het bedrijf van Fenno Franzen. Zo blijft ook de nieuwste techniek in de familie.</p>
+      <p class="reveal">Daarom kiezen we nooit voor een standaardoplossing, maar voor wat bij jouw event past. En voor licht en visuals werken we samen met <a href="{MATRIX}" target="_blank" rel="noopener">MATRIX E.I.L.</a>, het licht- en showbedrijf uit onze eigen familie. Zo blijft ook de nieuwste techniek in de familie.</p>
     </div>
   </div>
 </section>
@@ -646,7 +858,179 @@ def project(p):
 </section>
 {cta_band()}'''
     return page(f'project-{p["slug"]}.html', f'{p["titel"]} | Projecten | GTF Franzen', f'{p["titel"]}, {p["sub"].lower()} in {p["plek"]} ({p["jaar"]}). Een project van GTF Franzen.',
-                body, image=cover)
+                body, image=cover, sectie='projecten.html')
+
+
+# ---------------------------------------------------------------- Pagina per dienst en per event
+EVENT_BY_ID = {e['id']: e for e in EVENTS}
+DIENST_BY_SLUG = {d['slug']: d for d in DIENSTEN}
+PROJ_BY_SLUG = {p['slug']: p for p in PROJECTEN}
+
+
+def crumbs_ld(items):
+    return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': BASE + ('' if u == 'index.html' else u)} for i, (n, u) in enumerate(items)]}
+
+
+def faq_ld(faq):
+    return {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faq]}
+
+
+def proj_kaarten(slugs):
+    return ''.join(f'''
+      <a class="proj reveal" href="project-{p["slug"]}.html">
+        <span class="proj-img"><img src="{cover_of(p)}" alt="{p["titel"]}" loading="lazy"></span>
+        <span class="proj-meta">{p["plek"]} · {p["jaar"]}</span>
+        <h3>{p["titel"]}</h3>
+        <p>{p["sub"]}</p>
+      </a>''' for p in (PROJ_BY_SLUG[s] for s in slugs))
+
+
+def landing(soort, key):
+    if soort == 'dienst':
+        info, titel = DIENST_PAGINAS[key], DIENST_BY_SLUG[key]['titel']
+        ouder, krijg, krijg_kop, type_q = ('Diensten', 'diensten.html'), info['krijg'], 'Wat je van ons krijgt', ''
+        links = [(EVENT_PAGINAS[i]['pagina'], EVENT_BY_ID[i]['label'], EVENT_BY_ID[i]['kop']) for i in info['events']]
+        links_kop, links_h2 = 'Voor welke events', 'Waar we dit<br><em>inzetten.</em>'
+    else:
+        info, titel = EVENT_PAGINAS[key], EVENT_BY_ID[key]['label']
+        ouder, krijg, krijg_kop, type_q = ('Evenementen', 'evenementen.html'), EVENT_BY_ID[key]['regelen'], 'Dit regelen wij voor je', f'?type={key}'
+        links = [(DIENST_PAGINAS[s]['pagina'], DIENST_BY_SLUG[s]['titel'], DIENST_BY_SLUG[s]['kort']) for s in info['diensten']]
+        links_kop, links_h2 = 'Welke techniek', 'Alles uit<br><em>één hand.</em>'
+    fotos = info['fotos']
+    stappen = ''.join(f'<div class="lp-step reveal"><span class="step-nr">{i + 1:02d}</span><h3>{k}</h3><p>{t}</p></div>' for i, (k, t) in enumerate(info['aanpak']))
+    rijen = ''.join(f'<a href="{u}"><b>{n}</b><span>{k}</span></a>' for u, n, k in links)
+    faq = ''.join(f'<details class="reveal"><summary>{q}</summary><p>{a}</p></details>' for q, a in info['faq'])
+    proj = f'''
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head row"><div>{eyebrow('04', 'Uit de praktijk')}<h2 class="display reveal">Zo zag het<br><em>eruit.</em></h2></div><a class="link-arrow reveal" href="projecten.html">Alle projecten</a></div>
+    <div class="proj-grid{' two-up' if len(info['projecten']) > 1 else ' one-up'}">{proj_kaarten(info['projecten'])}
+    </div>
+  </div>
+</section>''' if info['projecten'] else ''
+    body = f'''<section class="pp-hero lp-hero">
+  <img src="assets/img/{fotos[0]}" alt="" fetchpriority="high">
+  <div class="wrap">
+    <p class="crumb"><a href="{ouder[1]}">{ouder[0]}</a> / {titel}</p>
+    <h1 class="display xl">{info["h1"]}</h1>
+    <p class="pp-sub">{info["sub"]}</p>
+    <div class="btns"><a class="btn fill" href="contact.html{type_q}">Vraag een offerte aan</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two">
+    <div>{eyebrow('01', titel)}<p class="lead reveal">{info["intro"]}</p></div>
+    <div class="lp-box reveal"><p class="pane-label">{krijg_kop}</p><ul class="checks">{"".join(f"<li>{k}</li>" for k in krijg)}</ul></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="sec-head">{eyebrow('02', 'Onze aanpak')}<h2 class="display reveal">Zo zorgen we<br><em>dat het klopt.</em></h2></div>
+    <div class="lp-steps">{stappen}</div>
+  </div>
+</section>
+
+<div class="lp-strip" aria-hidden="true">{"".join(f'<img src="assets/img/{f}" alt="" loading="lazy">' for f in fotos[1:])}</div>
+
+<section class="section">
+  <div class="wrap two">
+    <div>{eyebrow('03', links_kop)}<h2 class="display reveal">{links_h2}</h2></div>
+    <nav class="lp-links reveal" aria-label="{links_kop}">{rijen}</nav>
+  </div>
+</section>
+{proj}
+<section class="section faq">
+  <div class="wrap two">
+    <div>{eyebrow('?', 'Vragen over ' + titel.lower())}<h2 class="display reveal">Goed om<br><em>te weten.</em></h2></div>
+    <div class="faq-list">{faq}</div>
+  </div>
+</section>
+
+{cta_band()}'''
+    ld = [ORG, crumbs_ld([('Home', 'index.html'), ouder, (titel, info['pagina'])]), faq_ld(info['faq'])]
+    if soort == 'dienst':
+        ld.append({'@context': 'https://schema.org', '@type': 'Service', 'name': titel, 'serviceType': titel, 'description': info['seo'][1],
+                   'provider': {'@id': BASE + '#gtf'}, 'areaServed': ORG['areaServed'], 'url': BASE + info['pagina']})
+    return page(info['pagina'], info['seo'][0], info['seo'][1], body, ld=ld, image=f'assets/img/{fotos[0]}',
+                sectie=ouder[1])
+
+
+def evenementen():
+    kaarten = ''.join(f'''
+      <a class="proj big reveal" href="{EVENT_PAGINAS[e["id"]]["pagina"]}">
+        <span class="proj-img"><img src="assets/img/{e["img"]}" alt="{e["label"]}" loading="lazy"></span>
+        <span class="proj-meta">{EVENT_PAGINAS[e["id"]]["sub"]}</span>
+        <h3>{e["label"]}</h3>
+        <p>{e["kop"]}</p>
+      </a>''' for e in EVENTS)
+    body = f'''<section class="page-hero">
+  <div class="wrap">
+    {eyebrow('—', 'Evenementen')}
+    <h1 class="display xl reveal">Elk event<br><em>z’n eigen aanpak.</em></h1>
+    <p class="lead reveal">Een bruiloft vraagt iets anders dan een schuttersfeest, en een congres iets anders dan een festival. Kies wat je organiseert en zie hoe we het aanpakken.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap"><div class="proj-grid">{kaarten}
+  </div></div>
+</section>
+{cta_band()}'''
+    return page('evenementen.html', 'Evenementen | Techniek voor elk soort event | GTF Franzen',
+                'Geluid, licht, omroep en stroom voor festivals, dorpsfeesten, carnaval, bruiloften, bedrijfsevents, jubilea en schuttersfeesten in Limburg en omgeving.',
+                body, dark_header=False, ld=[ORG, crumbs_ld([('Home', 'index.html'), ('Evenementen', 'evenementen.html')])])
+
+
+def werkgebied():
+    import math
+    lon0, lat0 = PLAATSEN[0][1], PLAATSEN[0][2]
+    km = lambda lon, lat: ((lon - lon0) * 111.3 * math.cos(math.radians(lat0)), (lat0 - lat) * 111.3)
+    # Wortelschaal: dichtbij krijgt meer ruimte, zodat de plaatsen rond Bocholtz leesbaar blijven
+    straal = lambda d: 320 * math.sqrt(d / 50)
+    cx, cy = 420, 380
+    ringen = ''.join(f'<circle cx="{cx}" cy="{cy}" r="{straal(r):.0f}"/><text x="{cx + 6}" y="{cy - straal(r) - 8:.0f}" class="r-lbl">{r} km</text>' for r in (5, 15, 50))
+    punten = ''
+    for i, (n, lon, lat, land) in enumerate(PLAATSEN):
+        dx, dy = km(lon, lat)
+        d = math.hypot(dx, dy) or 1
+        x, y = cx + dx / d * straal(d), cy + dy / d * straal(d)
+        if i == 0:
+            continue
+        rechts = x < cx + 230 and n not in ("Kerkrade", "Valkenburg", "Maastricht")
+        punten += f'<g class="pt {land.lower()}"><circle cx="{x:.0f}" cy="{y:.0f}" r="5"/><text x="{x + (10 if rechts else -10):.0f}" y="{y + 5:.0f}"{"" if rechts else " text-anchor=\"end\""}>{n}</text></g>'
+    kaart = f'''<svg class="map" viewBox="0 0 840 740" role="img" aria-label="Werkgebied rond Bocholtz, met plaatsen in Nederland, België en Duitsland">
+      <g class="rings">{ringen}</g>{punten}
+      <g class="home"><circle cx="{cx}" cy="{cy}" r="14"/><circle cx="{cx}" cy="{cy}" r="26" class="pulse"/><text x="{cx}" y="{cy + 48}" text-anchor="middle">BOCHOLTZ</text></g>
+    </svg>'''
+    lijst = lambda land: ', '.join(n for n, _, _, l in PLAATSEN if l == land)
+    body = f'''<section class="page-hero">
+  <div class="wrap">
+    {eyebrow('—', 'Werkgebied')}
+    <h1 class="display xl reveal">Vanuit Bocholtz<br><em>de hele regio in.</em></h1>
+    <p class="lead reveal">Bocholtz ligt precies op het drielandenpunt. Daardoor zitten we net zo snel in Aken of Kelmis als in Heerlen of Maastricht. We werken in heel Zuid-Limburg, de rest van Nederland, België en Duitsland.</p>
+  </div>
+</section>
+<section class="section" style="padding-top:clamp(40px,6vw,80px)">
+  <div class="wrap two">
+    <div class="map-wrap reveal">{kaart}<p class="map-legend"><span class="nl">Nederland</span><span class="be">België</span><span class="de">Duitsland</span></p></div>
+    <div>
+      {eyebrow('01', 'Waar we werken')}
+      <h2 class="display reveal">Drie landen,<br><em>één familie.</em></h2>
+      <div class="regio reveal"><h3>Zuid-Limburg</h3><p>{lijst("NL")} en omgeving. Hier zijn we thuis en kennen we de zalen, tenten, sportvelden en verenigingen.</p></div>
+      <div class="regio reveal"><h3>België</h3><p>{lijst("BE")} en de rest van Belgisch Limburg en de Oostkantons.</p></div>
+      <div class="regio reveal"><h3>Duitsland</h3><p>{lijst("DE")} en de rest van de regio Aken.</p></div>
+      <p class="reveal">Verder weg? Ook dan kijken we graag wat er mogelijk is. Voor grotere producties rijden we door heel Nederland.</p>
+      <a class="btn fill reveal" href="contact.html">Vraag een offerte aan</a>
+    </div>
+  </div>
+</section>
+{cta_band()}'''
+    return page('werkgebied.html', 'Werkgebied | Eventtechniek in Zuid-Limburg, België en Duitsland | GTF Franzen',
+                'GTF Franzen uit Bocholtz levert geluid, licht, omroep en stroom in Zuid-Limburg (Heerlen, Kerkrade, Maastricht, Valkenburg), België (Kelmis, Eupen) en Duitsland (Aken).',
+                body, dark_header=False, ld=[ORG, crumbs_ld([('Home', 'index.html'), ('Werkgebied', 'werkgebied.html')])])
 
 
 # ---------------------------------------------------------------- Contact
@@ -714,6 +1098,7 @@ def sitemap(pages):
 
 
 if __name__ == '__main__':
-    built = [home(), diensten(), over(), werkwijze(), projecten(), *[project(p) for p in PROJECTEN], contact(), privacy(), notfound()]
+    built = [home(), diensten(), *[landing('dienst', d['slug']) for d in DIENSTEN], evenementen(), *[landing('event', e['id']) for e in EVENTS],
+             projecten(), *[project(p) for p in PROJECTEN], over(), werkwijze(), werkgebied(), contact(), privacy(), notfound()]
     sitemap(built)
     print('Gebouwd:', ', '.join(built))
