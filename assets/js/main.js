@@ -118,22 +118,23 @@ document.querySelectorAll('[data-gallery]').forEach(g => {
   });
 });
 
-// Offerteformulier: vooraf invullen vanuit de event-kiezer en versturen als e-mail
+// Offerteformulier: vooraf invullen vanuit de event-kiezer, versturen via Web3Forms of anders als e-mail
 const form = document.querySelector('.quote-form');
 if (form) {
   const type = new URLSearchParams(location.search).get('type');
   const radio = type && form.querySelector(`input[name="type"][value="${CSS.escape(type)}"]`);
   if (radio) radio.checked = true;
   const note = form.querySelector('.form-note');
-  form.addEventListener('submit', e => {
+  const submit = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!form.reportValidity()) return;
-    const mail = form.dataset.mail;
-    if (!mail) { note.textContent = 'Het formulier wordt binnenkort gekoppeld. Neem tot die tijd telefonisch contact met ons op.'; return; }
     const d = new FormData(form);
+    if (d.get('botcheck')) return;
     const typeLabel = form.querySelector('input[name="type"]:checked + span');
+    const soort = typeLabel ? typeLabel.textContent : 'event';
     const regels = [
-      `Soort event: ${typeLabel ? typeLabel.textContent : ''}`,
+      `Soort event: ${soort}`,
       `Nodig: ${d.getAll('nodig').join(', ') || 'nog niet bekend'}`,
       `Datum: ${d.get('datum') || '-'}`,
       `Aantal gasten: ${d.get('gasten') || '-'}`,
@@ -144,9 +145,92 @@ if (form) {
       `${d.get('naam')}`,
       `${d.get('telefoon') || ''}`,
       `${d.get('email')}`,
-    ];
-    const onderwerp = `Offerteaanvraag: ${typeLabel ? typeLabel.textContent : 'event'}`;
-    location.href = `mailto:${mail}?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(regels.join('\n'))}`;
-    note.textContent = 'Je mailprogramma opent met je aanvraag. Druk daar op verzenden, dan hoor je snel van ons.';
+    ].join('\n');
+    const onderwerp = `Offerteaanvraag: ${soort}`;
+    const key = form.dataset.key;
+    if (!key) {
+      location.href = `mailto:${form.dataset.mail}?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(regels)}`;
+      note.textContent = 'Je mailprogramma opent met je aanvraag. Druk daar op verzenden, dan hoor je snel van ons.';
+      return;
+    }
+    submit.disabled = true;
+    note.textContent = 'Versturen...';
+    try {
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: key, subject: onderwerp, from_name: 'Website GTF Franzen', name: d.get('naam'), email: d.get('email'), replyto: d.get('email'), message: regels }),
+      });
+      const res = await r.json();
+      if (!res.success) throw new Error(res.message);
+      form.reset();
+      note.textContent = 'Bedankt! Je aanvraag is binnen. Je hoort snel van ons.';
+    } catch (err) {
+      note.textContent = `Versturen lukte niet. Mail ons gerust direct op ${form.dataset.mail}.`;
+    } finally {
+      submit.disabled = false;
+    }
   });
 }
+
+// VU-meter in de header: beweegt mee met het scrollen, en gaat vol open als de stekker erin zit
+let powered = false;
+const vuRows = [...document.querySelectorAll('.vu-row')].map(r => [...r.children]);
+if (vuRows.length && !reduce) {
+  let energy = 0, lastY = scrollY;
+  const lvl = [0, 0];
+  addEventListener('scroll', () => { energy = Math.min(1, energy + Math.abs(scrollY - lastY) / 400); lastY = scrollY; }, { passive: true });
+  setInterval(() => {
+    energy *= .9;
+    const base = powered ? .62 : .18;
+    vuRows.forEach((leds, ch) => {
+      const target = Math.min(1, base + energy * .7 + Math.random() * (powered ? .35 : .22));
+      lvl[ch] = target > lvl[ch] ? target : lvl[ch] * .82;
+      const n = Math.round(lvl[ch] * leds.length);
+      leds.forEach((led, i) => led.classList.toggle('on', i < n));
+    });
+  }, 70);
+}
+
+// Stekker in het stopcontact steken
+document.querySelectorAll('.cta-band').forEach(band => {
+  const plug = band.querySelector('.plug');
+  const track = band.querySelector('.power-track');
+  if (!plug || !track) return;
+  band.classList.add('unpowered');
+  const rest = () => parseFloat(getComputedStyle(plug).right) - parseFloat(getComputedStyle(track).getPropertyValue('--base'));
+  const setPower = on => {
+    band.classList.toggle('powered', on);
+    band.classList.toggle('unpowered', !on);
+    plug.classList.toggle('in', on);
+    plug.setAttribute('aria-label', on ? 'Trek de stekker eruit' : 'Steek de stekker in het stopcontact');
+    plug.style.removeProperty('--plug-x');
+    track.style.removeProperty('--plug-x');
+    powered = on || !!document.querySelector('.cta-band.powered');
+    if (on && navigator.vibrate) navigator.vibrate(30);
+  };
+  let startX = 0, startOff = 0, moved = false;
+  plug.addEventListener('pointerdown', e => {
+    startX = e.clientX; startOff = band.classList.contains('powered') ? 0 : rest(); moved = false;
+    plug.setPointerCapture(e.pointerId);
+    plug.classList.add('dragging');
+  });
+  plug.addEventListener('pointermove', e => {
+    if (!plug.classList.contains('dragging')) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    const off = Math.max(0, Math.min(startOff + 60, startOff - dx));
+    plug.style.setProperty('--plug-x', `${off}px`);
+    track.style.setProperty('--plug-x', `${off}px`);
+  });
+  const end = () => {
+    if (!plug.classList.contains('dragging')) return;
+    plug.classList.remove('dragging');
+    if (!moved) return;
+    const off = parseFloat(plug.style.getPropertyValue('--plug-x')) || 0;
+    setPower(off < 40);
+  };
+  plug.addEventListener('pointerup', end);
+  plug.addEventListener('pointercancel', end);
+  plug.addEventListener('click', () => { if (!moved) setPower(!band.classList.contains('powered')); moved = false; });
+});
