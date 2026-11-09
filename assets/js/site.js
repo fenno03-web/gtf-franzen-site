@@ -47,5 +47,32 @@
     location.href = 'mailto:' + f.dataset.mail + '?subject=' + encodeURIComponent(f.dataset.subject + (g('naam') ? ' · ' + g('naam') : '')) + '&body=' + encodeURIComponent(body);
   });
 
+  // verhuur: aanvraaglijst
+  var bar = d.querySelector('.cbar');
+  if (bar) {
+    var KEY = 'gtf-lijst', lijst = [];
+    try { lijst = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+    var cnt = bar.querySelector('[data-count]'), lab = cnt.nextElementSibling;
+    var sync = function () {
+      d.querySelectorAll('.add').forEach(function (b) { b.setAttribute('aria-pressed', lijst.indexOf(b.dataset.item) > -1 ? 'true' : 'false'); });
+      cnt.textContent = lijst.length;
+      lab.textContent = lijst.length === 1 ? lab.dataset.labelOne : lab.dataset.labelMore;
+      bar.classList.toggle('vis', lijst.length > 0);
+      try { localStorage.setItem(KEY, JSON.stringify(lijst)); } catch (e) {}
+    };
+    d.querySelectorAll('.add').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = lijst.indexOf(b.dataset.item);
+        if (i > -1) lijst.splice(i, 1); else lijst.push(b.dataset.item);
+        sync();
+      });
+    });
+    bar.querySelector('[data-send]').addEventListener('click', function () {
+      var body = bar.dataset.intro + '\n\n' + lijst.map(function (x) { return '- ' + x; }).join('\n') + '\n\n';
+      location.href = 'mailto:' + bar.dataset.mail + '?subject=' + encodeURIComponent(bar.dataset.subject) + '&body=' + encodeURIComponent(body);
+    });
+    sync();
+  }
+
   d.querySelectorAll('[data-year]').forEach(function (e) { e.textContent = new Date().getFullYear(); });
 })();
