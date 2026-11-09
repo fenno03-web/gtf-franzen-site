@@ -40,7 +40,12 @@ ORG = {
     'description': 'Familiebedrijf uit Bocholtz voor geluid, licht, omroepinstallaties, stroom en complete producties voor events in Nederland, België en Duitsland.',
     'areaServed': [{'@type': 'Country', 'name': n} for n in ('Nederland', 'België', 'Duitsland')],
     'address': {'@type': 'PostalAddress', 'addressLocality': 'Bocholtz', 'addressCountry': 'NL'},
-    'knowsAbout': ['Geluidstechniek', 'Lichttechniek', 'Omroepinstallaties', '100V-systemen', 'Aggregaten', 'Eventproductie'],
+    'knowsAbout': ['Geluidstechniek', 'Lichttechniek', 'Omroepinstallaties', '100V-omroep', '100V-systemen', 'ELA-Anlagen',
+                   'Public address systems', 'Aggregaten', 'Eventproductie'],
+    'makesOffer': [{'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, '@id': BASE + 'omroep-100v.html#verhuur'}} for n in
+                   ['Verhuur van 100V-omroepinstallaties']] + [
+                  {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n}} for n in
+                   ['Geluidsverhuur en geluidstechniek', 'Lichtverhuur en lichttechniek', 'Aggregaten en stroomverdeling', 'Complete eventproductie']],
 }
 if MAIL:
     ORG['email'] = MAIL
@@ -186,12 +191,13 @@ DIENST_PAGINAS = {
     },
     'omroep': {
         'pagina': 'omroep-100v.html',
-        'seo': ('Omroepinstallatie huren | 100V-omroep voor events | GTF Franzen',
-                'Omroepinstallaties en 100V-systemen voor schuttersfeesten, wielerkoersen, optochten en grote terreinen. Bekend van het Oud Limburgs Schuttersfeest en de Amstel Gold Race.'),
+        'seo': ('100V omroepinstallatie huren | Omroepverhuur Limburg | GTF Franzen',
+                'GTF Franzen uit Bocholtz verhuurt 100V-omroepinstallaties met hoorns, versterkers en microfoons, inclusief opbouw. Voor schuttersfeesten, wielerkoersen, optochten en grote terreinen in Nederland, België en Duitsland.'),
         'h1': 'Omroep die<br>overal <em>aankomt.</em>',
         'sub': '100V-omroep en hoorns · Bekend van het OLS en de Amstel Gold Race',
+        'antwoord': 'GTF Franzen uit Bocholtz (Zuid-Limburg) verhuurt 100V-omroepinstallaties voor evenementen: hoorns, 100V-versterkers, microfoons, bekabeling en masten, uit eigen voorraad. We plannen de opzet, bouwen op, verzorgen de bediening als je dat wilt en halen alles weer op. We werken in heel Limburg, de rest van Nederland, België en Duitsland.',
         'intro': 'Omroep is waar GTF Franzen in Limburg al generaties om bekendstaat. Je herkent ons aan de hoorns met FRANZEN BOCHOLTZ erop. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140, langs de Amstel Gold Race hangen ze langs het parcours. Over een groot terrein of een lange route zorgen we dat iedereen hoort wat er gezegd wordt.',
-        'krijg': ['100V-omroep over grote afstanden', 'Hoorns op masten, palen en gebouwen', 'Omroep voor jurywagens en mobiele omroep', 'Omroep voor optochten en wielerkoersen', 'Microfoons voor speaker en presentator', 'Advies over de opzet vooraf'],
+        'krijg': ['100V-omroepinstallaties huren, uit eigen voorraad', '100V-omroep over grote afstanden', 'Hoorns op masten, palen en gebouwen', 'Omroep voor jurywagens en mobiele omroep', 'Omroep voor optochten en wielerkoersen', 'Microfoons voor speaker en presentator', 'Advies over de opzet vooraf'],
         'aanpak': [('Waarom 100V?', 'Met een 100V-systeem sluit je veel hoorns aan over lange afstanden, zonder dat het geluid wegvalt. Ideaal voor grote terreinen, parcoursen en optochten.'),
                    ('Het terrein in kaart', 'We kijken vooraf waar het publiek staat en waar de hoorns moeten hangen. Zo is de speaker overal te verstaan, zonder dat het op één plek te hard staat.'),
                    ('Ook onderweg', 'Met omroep op jurywagens en mobiele omroep reist het geluid mee met de optocht of de koers.')],
@@ -200,7 +206,11 @@ DIENST_PAGINAS = {
         'projecten': ['amstel-gold-race'],
         'faq': [('Wat is een 100V-omroepinstallatie?', 'Een systeem waarmee je veel luidsprekers of hoorns via lange kabels op één versterker aansluit. Het is betrouwbaar en geschikt voor grote terreinen, routes en gebouwen.'),
                 ('Hoeveel hoorns kunnen jullie plaatsen?', 'Dat hangt af van het terrein. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140. Kleiner kan natuurlijk ook.'),
-                ('Doen jullie ook omroep voor jurywagens?', 'Ja. Op schuttersfeesten zoals het OLS reden diverse jurywagens met onze omroep.')],
+                ('Doen jullie ook omroep voor jurywagens?', 'Ja. Op schuttersfeesten zoals het OLS reden diverse jurywagens met onze omroep.'),
+                ('Kan ik bij jullie een 100V-omroepinstallatie huren?', 'Ja. We verhuren complete 100V-omroepinstallaties uit eigen voorraad: hoorns, 100V-versterkers, microfoons, kabels en masten. Meestal bouwen we zelf op en regelen we de bediening, zodat je zeker weet dat alles werkt.'),
+                ('Wat zit er in een 100V-omroepset?', 'Een versterker met 100V-uitgang, het aantal hoorns of luidsprekers dat nodig is voor je terrein of route, bekabeling, masten of bevestiging en een of meer microfoons voor de speaker. We stellen de set samen op basis van jouw locatie.'),
+                ('Waar verhuren jullie omroepinstallaties?', 'Vanuit Bocholtz werken we in heel Limburg en de rest van Nederland, en net zo makkelijk in België en Duitsland. Door de ligging op de grens zijn Aken, Luik en de Euregio vlakbij.'),
+                ('Wat kost het huren van een 100V-omroepinstallatie?', 'Dat hangt af van het aantal hoorns, de afstanden en hoe lang je de installatie nodig hebt. Je krijgt altijd een vrijblijvende offerte op maat.')],
     },
     'stroom': {
         'pagina': 'stroom-aggregaten.html',
@@ -385,21 +395,24 @@ CUES = ''.join(f'<li><span class="cue-nr">CUE {i:02d}</span><b>{t}</b><span>{w}<
 LOGO = mark('logo-mark', small=True) + '<span class="logo-txt"><b>GTF Franzen</b><small>Sound · Light · Vision</small></span>'
 
 
-def head(title, desc, image='assets/img/og.jpg', ld=None):
+def head(title, desc, image='assets/img/og.jpg', ld=None, lang='nl', alternates=None):
     url = BASE + ('' if CURRENT == 'index.html' else CURRENT)
+    alt_html = ''.join(f'\n<link rel="alternate" hreflang="{l}" href="{BASE}{u}">' for l, u in (alternates or {}).items())
+    if alternates:
+        alt_html += f'\n<link rel="alternate" hreflang="x-default" href="{BASE}{alternates["nl"]}">'
     ld = ld if ld is not None else [ORG]
     ld_html = ''.join(f'\n<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
     return f'''<!doctype html>
-<html lang="nl">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="{url}">
+<link rel="canonical" href="{url}">{alt_html}
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="nl_NL">
+<meta property="og:locale" content="{LOCALE[lang]}">
 <meta property="og:site_name" content="GTF Franzen">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{title}">
@@ -513,11 +526,16 @@ def cta_band():
 </section>'''
 
 
-def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image='assets/img/og.jpg', extra_js='', sectie=None):
+def page(name, title, desc, body, dark_header=True, ld=None, body_cls='', image='assets/img/og.jpg', extra_js='', sectie=None,
+         lang='nl', alternates=None):
     global CURRENT
     CURRENT = name
-    html = (head(title, desc, image=image, ld=ld) + f'\n<body class="{body_cls}">\n' + header(name, dark_header, sectie)
-            + '\n<main id="main">\n' + body + '\n</main>\n' + footer(extra_js))
+    if lang == 'nl':
+        top, bottom = header(name, dark_header, sectie), footer(extra_js)
+    else:
+        top, bottom = header_intl(lang, dark_header), footer_intl(lang)
+    html = (head(title, desc, image=image, ld=ld, lang=lang, alternates=alternates) + f'\n<body class="{body_cls}">\n' + top
+            + '\n<main id="main">\n' + body + '\n</main>\n' + bottom)
     (ROOT / name).write_text(html, encoding='utf-8')
     return name
 
@@ -922,7 +940,7 @@ def landing(soort, key):
 
 <section class="section">
   <div class="wrap two">
-    <div>{eyebrow('01', titel)}<p class="lead reveal">{info["intro"]}</p></div>
+    <div>{eyebrow('01', titel)}{f'<p class="lead reveal" id="verhuur"><strong>{info["antwoord"]}</strong></p>' if info.get("antwoord") else ""}<p class="lead reveal">{info["intro"]}</p>{lang_links(info["pagina"])}</div>
     <div class="lp-box reveal"><p class="pane-label">{krijg_kop}</p><ul class="checks">{"".join(f"<li>{k}</li>" for k in krijg)}</ul></div>
   </div>
 </section>
@@ -953,10 +971,15 @@ def landing(soort, key):
 {cta_band()}'''
     ld = [ORG, crumbs_ld([('Home', 'index.html'), ouder, (titel, info['pagina'])]), faq_ld(info['faq'])]
     if soort == 'dienst':
-        ld.append({'@context': 'https://schema.org', '@type': 'Service', 'name': titel, 'serviceType': titel, 'description': info['seo'][1],
-                   'provider': {'@id': BASE + '#gtf'}, 'areaServed': ORG['areaServed'], 'url': BASE + info['pagina']})
+        svc = {'@context': 'https://schema.org', '@type': 'Service', 'name': titel, 'serviceType': titel, 'description': info['seo'][1],
+               'provider': {'@id': BASE + '#gtf'}, 'areaServed': ORG['areaServed'], 'url': BASE + info['pagina']}
+        if key == 'omroep':
+            svc.update({'@id': BASE + 'omroep-100v.html#verhuur', 'name': 'Verhuur van 100V-omroepinstallaties',
+                        'alternateName': ['100V omroepinstallatie huren', 'Omroepinstallatie huren', '100-Volt-ELA-Anlage mieten', '100V public address hire'],
+                        'serviceType': '100V-omroepverhuur', 'category': 'Verhuur van omroep- en geluidsapparatuur'})
+        ld.append(svc)
     return page(info['pagina'], info['seo'][0], info['seo'][1], body, ld=ld, image=f'assets/img/{fotos[0]}',
-                sectie=ouder[1])
+                sectie=ouder[1], alternates=ALTERNATES.get(info['pagina']))
 
 
 def evenementen():
@@ -1091,14 +1114,200 @@ def notfound():
     return page('404.html', 'Pagina niet gevonden | GTF Franzen', 'Deze pagina bestaat niet.', body, dark_header=False)
 
 
+# ---------------------------------------------------------------- Andere talen (DE/EN)
+LOCALE = {'nl': 'nl_NL', 'de': 'de_DE', 'en': 'en_GB'}
+ALTERNATES = {}
+for _p in ('omroep-100v.html', 'de-100v-ela-anlage-mieten.html', 'en-100v-pa-system-hire.html'):
+    ALTERNATES[_p] = {'nl': 'omroep-100v.html', 'de': 'de-100v-ela-anlage-mieten.html', 'en': 'en-100v-pa-system-hire.html'}
+TAAL_NAAM = {'nl': 'Nederlands', 'de': 'Deutsch', 'en': 'English'}
+
+INTL = {
+    'de': {
+        'pagina': 'de-100v-ela-anlage-mieten.html',
+        'skip': 'Zum Inhalt', 'menu': 'Hauptmenü', 'cta': 'Angebot anfragen', 'projekte': 'Projekte', 'nl_site': 'Niederländische Website',
+        'seo': ('100-Volt-ELA-Anlage mieten | Beschallung für Events | GTF Franzen',
+                'GTF Franzen aus Bocholtz (NL), direkt an der Grenze bei Aachen, vermietet 100-Volt-ELA-Anlagen mit Druckkammerlautsprechern, '
+                'Verstärkern und Mikrofonen inklusive Aufbau. Für Schützenfeste, Radrennen, Umzüge und große Veranstaltungsgelände.'),
+        'crumb': '100-Volt-ELA-Anlagen',
+        'h1': 'Durchsagen, die<br>überall <em>ankommen.</em>',
+        'sub': '100-Volt-ELA-Anlagen mieten · Aufbau und Betreuung aus einer Hand',
+        'antwort': 'GTF Franzen aus Bocholtz (Niederlande, direkt an der Grenze bei Aachen) vermietet 100-Volt-ELA-Anlagen für Veranstaltungen: '
+                   'Druckkammerlautsprecher (Hornlautsprecher), 100-Volt-Verstärker, Mikrofone, Verkabelung und Masten aus eigenem Bestand. '
+                   'Wir planen die Anlage, bauen sie auf, betreuen sie auf Wunsch während der Veranstaltung und bauen wieder ab. '
+                   'Wir sind in Deutschland, den Niederlanden und Belgien im Einsatz.',
+        'intro': 'Beschallung über große Flächen und lange Strecken ist seit Generationen unser Markenzeichen. Man erkennt uns an den Hörnern mit '
+                 'der Aufschrift FRANZEN BOCHOLTZ. Entlang der Strecke des Amstel Gold Race sorgen sie dafür, dass das Publikum hört, was im Rennen passiert.',
+        'liste_kop': 'Das bekommen Sie',
+        'liste': ['100-Volt-ELA-Anlagen zur Miete, aus eigenem Bestand', 'Beschallung über große Entfernungen', 'Hornlautsprecher an Masten, Pfählen und Gebäuden',
+                  'Mobile Beschallung für Umzüge und Radrennen', 'Mikrofone für Sprecher und Moderation', 'Planung, Aufbau und Betreuung vor Ort'],
+        'warum_kop': 'Warum 100 Volt?',
+        'warum': [('Lange Kabelwege', 'Mit einer 100-Volt-Anlage schließen Sie viele Lautsprecher über lange Leitungen an einen Verstärker an, ohne dass der Ton wegbricht.'),
+                  ('Gut verständlich', 'Wir planen vorab, wo das Publikum steht und wo die Hörner hängen. So ist der Sprecher überall gut zu verstehen, ohne dass es an einer Stelle zu laut ist.'),
+                  ('Zuverlässig', 'Robuste Technik, die bei Wind, Regen und tausenden Besuchern einfach funktioniert.')],
+        'faq_kop': 'Häufige Fragen',
+        'faq': [('Kann ich bei Ihnen eine 100-Volt-ELA-Anlage mieten?', 'Ja. Wir vermieten komplette 100-Volt-ELA-Anlagen aus eigenem Bestand: Hornlautsprecher, 100-Volt-Verstärker, Mikrofone, Kabel und Masten. In der Regel bauen wir selbst auf, damit sicher alles funktioniert.'),
+                ('Was ist eine 100-Volt-ELA-Anlage?', 'Eine elektroakustische Anlage, bei der viele Lautsprecher über lange Kabel an einem Verstärker hängen. Sie ist zuverlässig und ideal für große Gelände, Strecken und Gebäude.'),
+                ('Kommen Sie auch nach Deutschland?', 'Ja. Bocholtz liegt direkt an der Grenze, wenige Minuten von Aachen. Wir arbeiten regelmäßig in Deutschland, den Niederlanden und Belgien.'),
+                ('Was kostet die Miete einer 100-Volt-Anlage?', 'Das hängt von der Anzahl der Lautsprecher, den Entfernungen und der Mietdauer ab. Sie erhalten immer ein unverbindliches Angebot.')],
+        'kontakt_kop': 'Erzählen Sie uns von<br>Ihrer <em>Veranstaltung.</em>',
+        'kontakt_txt': 'Eine kurze Nachricht genügt. Wir antworten gern auf Deutsch und schicken Ihnen ein unverbindliches Angebot.',
+        'mail_btn': 'E-Mail senden', 'mail_betreff': 'Anfrage 100-Volt-ELA-Anlage', 'tel': 'Anrufen',
+        'foot': 'Ton, Licht, Beschallung, Strom und komplette Produktionen. Familienunternehmen aus Bocholtz, seit über 50 Jahren.',
+        'area': 'Niederlande · Belgien · Deutschland', 'where': 'Bocholtz, Niederlande (bei Aachen)',
+    },
+    'en': {
+        'pagina': 'en-100v-pa-system-hire.html',
+        'skip': 'Skip to content', 'menu': 'Main menu', 'cta': 'Request a quote', 'projekte': 'Projects', 'nl_site': 'Dutch website',
+        'seo': ('100V PA system hire | Public address for events | GTF Franzen',
+                'GTF Franzen from Bocholtz (NL), on the border near Aachen and Liège, hires out 100V public address systems with horn speakers, '
+                'amplifiers and microphones, including set-up. For festivals, cycling races, parades and large event sites.'),
+        'crumb': '100V public address',
+        'h1': 'Announcements that<br><em>reach everyone.</em>',
+        'sub': '100V public address hire · Planning, set-up and operation',
+        'antwort': 'GTF Franzen from Bocholtz (South Limburg, the Netherlands) hires out 100V public address systems for events: horn speakers, '
+                   '100V amplifiers, microphones, cabling and masts from our own stock. We plan the layout, set it up, operate it if you like and take it down again. '
+                   'We work across the Netherlands, Belgium and Germany.',
+        'intro': 'Public address over large sites and long routes is what we have been known for over generations. You will recognise us by the horns '
+                 'that read FRANZEN BOCHOLTZ. Along the Amstel Gold Race course they make sure the crowd hears what is happening in the race.',
+        'liste_kop': 'What you get',
+        'liste': ['100V PA systems for hire, from our own stock', 'Public address over long distances', 'Horn speakers on masts, poles and buildings',
+                  'Mobile PA for parades and cycling races', 'Microphones for announcers and presenters', 'Planning, set-up and on-site support'],
+        'warum_kop': 'Why 100V?',
+        'warum': [('Long cable runs', 'A 100V system lets you connect many speakers to one amplifier over long cables without losing signal.'),
+                  ('Clear speech', 'We map out where the audience will be and where the horns go, so the announcer is clear everywhere without being too loud in one spot.'),
+                  ('Reliable', 'Robust equipment that keeps working in wind, rain and crowds of thousands.')],
+        'faq_kop': 'Frequently asked questions',
+        'faq': [('Can I hire a 100V public address system from you?', 'Yes. We hire out complete 100V PA systems from our own stock: horn speakers, 100V amplifiers, microphones, cables and masts. We usually set up ourselves so you know everything works.'),
+                ('What is a 100V public address system?', 'A system where many speakers are connected to a single amplifier over long cables. It is reliable and ideal for large sites, routes and buildings.'),
+                ('Where do you work?', 'From Bocholtz we cover the whole of the Netherlands, Belgium and Germany. Aachen, Liège and Maastricht are all close by.'),
+                ('How much does it cost to hire a 100V PA system?', 'That depends on the number of speakers, the distances and the hire period. You always get a free, no-obligation quote.')],
+        'kontakt_kop': 'Tell us about<br><em>your event.</em>',
+        'kontakt_txt': 'A short message is enough. We are happy to reply in English and send you a tailored, no-obligation quote.',
+        'mail_btn': 'Send an email', 'mail_betreff': 'Enquiry 100V public address hire', 'tel': 'Call',
+        'foot': 'Sound, light, public address, power and complete productions. Family business from Bocholtz for over 50 years.',
+        'area': 'Netherlands · Belgium · Germany', 'where': 'Bocholtz, the Netherlands (near Aachen)',
+    },
+}
+
+
+def lang_links(pagina, huidig='nl'):
+    alts = ALTERNATES.get(pagina)
+    if not alts:
+        return ''
+    links = ''.join(f'<a href="{u}" hreflang="{l}" lang="{l}">{TAAL_NAAM[l]}</a>' for l, u in alts.items() if l != huidig)
+    return f'<p class="lang-links reveal">{links}</p>'
+
+
+def header_intl(lang, dark=True):
+    t = INTL[lang]
+    return f'''<a class="skip" href="#main">{t["skip"]}</a>
+<header class="site-header{' on-dark' if dark else ''}">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="GTF Franzen">{LOGO}</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="{t["menu"]}"><a href="projecten.html">{t["projekte"]}</a><a href="index.html" hreflang="nl">{t["nl_site"]}</a><a class="nav-cta" href="#kontakt">{t["cta"]}</a></nav>
+  </div>
+</header>'''
+
+
+def footer_intl(lang):
+    t = INTL[lang]
+    items = []
+    if TEL:
+        items.append(f'<li><span>{t["tel"]}</span><a href="tel:{TEL}">{TEL_TXT or TEL}</a></li>')
+    if MAIL:
+        items.append(f'<li><span>E-mail</span><a href="mailto:{MAIL}">{MAIL}</a></li>')
+    items.append(f'<li><span>GTF Franzen</span><b>{ADRES or t["where"]}</b></li>')
+    items.append(f'<li><span>{t["area"]}</span><b>NL · DE · EN</b></li>')
+    return f'''<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html" aria-label="GTF Franzen">{LOGO}</a>
+        <p>{t["foot"]}</p>
+      </div>
+      <div><ul class="foot-contact">{"".join(items)}</ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year>2026</span> GTF Franzen · Sound | Light | Vision</span>
+      <a href="privacy.html" hreflang="nl">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js?v={ver('assets/js/main.js')}"></script>
+</body>
+</html>
+'''
+
+
+def omroep_intl(lang):
+    t = INTL[lang]
+    from urllib.parse import quote
+    mail = f'mailto:{MAIL}?subject={quote(t["mail_betreff"])}'
+    stappen = ''.join(f'<div class="lp-step reveal"><span class="step-nr">{i + 1:02d}</span><h3>{k}</h3><p>{x}</p></div>' for i, (k, x) in enumerate(t['warum']))
+    faq = ''.join(f'<details class="reveal"><summary>{q}</summary><p>{a}</p></details>' for q, a in t['faq'])
+    tel_btn = f'<a class="btn ghost" href="tel:{TEL}">{t["tel"]}: {TEL_TXT or TEL}</a>' if TEL else ''
+    body = f'''<section class="pp-hero lp-hero">
+  <img src="assets/img/amstel-3.jpg" alt="" fetchpriority="high">
+  <div class="wrap">
+    <p class="crumb">GTF Franzen / {t["crumb"]}</p>
+    <h1 class="display xl">{t["h1"]}</h1>
+    <p class="pp-sub">{t["sub"]}</p>
+    <div class="btns"><a class="btn fill" href="#kontakt">{t["cta"]}</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two">
+    <div>{eyebrow('01', t["crumb"])}<p class="lead reveal" id="verhuur"><strong>{t["antwort"]}</strong></p><p class="lead reveal">{t["intro"]}</p>{lang_links(t["pagina"], lang)}</div>
+    <div class="lp-box reveal"><p class="pane-label">{t["liste_kop"]}</p><ul class="checks">{"".join(f"<li>{k}</li>" for k in t["liste"])}</ul></div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="sec-head">{eyebrow('02', t["warum_kop"])}</div>
+    <div class="lp-steps">{stappen}</div>
+  </div>
+</section>
+
+<div class="lp-strip" aria-hidden="true"><img src="assets/img/masten.jpg" alt="" loading="lazy"><img src="assets/img/amstel-1.jpg" alt="" loading="lazy"></div>
+
+<section class="section faq">
+  <div class="wrap two">
+    <div>{eyebrow('?', t["faq_kop"])}</div>
+    <div class="faq-list">{faq}</div>
+  </div>
+</section>
+
+<section class="cta-band" id="kontakt">
+  <div class="wrap reveal">
+    <h2 class="display">{t["kontakt_kop"]}</h2>
+    <p class="lead">{t["kontakt_txt"]}</p>
+    <div class="btns"><a class="btn fill" href="{mail}">{t["mail_btn"]}</a>{tel_btn}</div>
+  </div>
+</section>'''
+    org = dict(ORG, description=t['seo'][1])
+    ld = [org, faq_ld(t['faq']),
+          {'@context': 'https://schema.org', '@type': 'Service', '@id': BASE + 'omroep-100v.html#verhuur', 'name': t['crumb'],
+           'serviceType': t['crumb'], 'description': t['seo'][1], 'provider': {'@id': BASE + '#gtf'}, 'areaServed': ORG['areaServed'],
+           'url': BASE + t['pagina'], 'inLanguage': lang}]
+    return page(t['pagina'], t['seo'][0], t['seo'][1], body, ld=ld, image='assets/img/amstel-3.jpg', lang=lang, alternates=ALTERNATES[t['pagina']])
+
+
 def sitemap(pages):
-    urls = ''.join(f'<url><loc>{BASE}{"" if p == "index.html" else p}</loc></url>' for p in pages if p != '404.html')
-    (ROOT / 'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    def url(p):
+        alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{u}"/>' for l, u in ALTERNATES.get(p, {}).items())
+        return f'<url><loc>{BASE}{"" if p == "index.html" else p}</loc>{alts}</url>'
+    urls = ''.join(url(p) for p in pages if p != '404.html')
+    (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                      f'xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}</urlset>\n')
     (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n')
 
 
 if __name__ == '__main__':
     built = [home(), diensten(), *[landing('dienst', d['slug']) for d in DIENSTEN], evenementen(), *[landing('event', e['id']) for e in EVENTS],
-             projecten(), *[project(p) for p in PROJECTEN], over(), werkwijze(), werkgebied(), contact(), privacy(), notfound()]
+             projecten(), *[project(p) for p in PROJECTEN], over(), werkwijze(), werkgebied(), contact(), privacy(),
+             omroep_intl('de'), omroep_intl('en'), notfound()]
     sitemap(built)
     print('Gebouwd:', ', '.join(built))
