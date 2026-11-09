@@ -196,7 +196,7 @@ DIENST_PAGINAS = {
                 'GTF Franzen uit Bocholtz verhuurt 100V-omroepinstallaties met hoorns, versterkers en microfoons, inclusief opbouw. Voor schuttersfeesten, wielerkoersen, optochten en grote terreinen in Nederland, België en Duitsland.'),
         'h1': 'Omroep die<br>overal <em>aankomt.</em>',
         'sub': '100V-omroep en hoorns · Bekend van het OLS en de Amstel Gold Race',
-        'antwoord': 'GTF Franzen uit Bocholtz (Zuid-Limburg) verhuurt 100V-omroepinstallaties voor evenementen: hoorns, 100V-versterkers, microfoons, bekabeling en masten, uit eigen voorraad. We plannen de opzet, bouwen op, verzorgen de bediening als je dat wilt en halen alles weer op. We werken in heel Limburg, de rest van Nederland, België en Duitsland.',
+        'antwoord': 'GTF Franzen uit Bocholtz (Zuid-Limburg) verhuurt 100V-omroepinstallaties voor evenementen. We hebben meer dan 300 eigen hoorns, voornamelijk van Philips, plus 100V-versterkers, microfoons, bekabeling en masten. We plannen de opzet, bouwen op, verzorgen de bediening als je dat wilt en halen alles weer op. We werken in heel Limburg, de rest van Nederland, België en Duitsland.',
         'intro': 'Omroep is waar GTF Franzen in Limburg al generaties om bekendstaat. Je herkent ons aan de hoorns met FRANZEN BOCHOLTZ erop. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140, langs de Amstel Gold Race hangen ze langs het parcours. Over een groot terrein of een lange route zorgen we dat iedereen hoort wat er gezegd wordt.',
         'krijg': ['100V-omroepinstallaties huren, uit eigen voorraad', '100V-omroep over grote afstanden', 'Hoorns op masten, palen en gebouwen', 'Omroep voor jurywagens en mobiele omroep', 'Omroep voor optochten en wielerkoersen', 'Microfoons voor speaker en presentator', 'Advies over de opzet vooraf'],
         'aanpak': [('Waarom 100V?', 'Met een 100V-systeem sluit je veel hoorns aan over lange afstanden, zonder dat het geluid wegvalt. Ideaal voor grote terreinen, parcoursen en optochten.'),
@@ -206,7 +206,7 @@ DIENST_PAGINAS = {
         'events': ['gemeente', 'dorpsfeest', 'festival'],
         'projecten': ['amstel-gold-race'],
         'faq': [('Wat is een 100V-omroepinstallatie?', 'Een systeem waarmee je veel luidsprekers of hoorns via lange kabels op één versterker aansluit. Het is betrouwbaar en geschikt voor grote terreinen, routes en gebouwen.'),
-                ('Hoeveel hoorns kunnen jullie plaatsen?', 'Dat hangt af van het terrein. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140. Kleiner kan natuurlijk ook.'),
+                ('Hoeveel hoorns kunnen jullie plaatsen?', 'We hebben meer dan 300 eigen hoorns, voornamelijk van Philips. Hoeveel er nodig zijn, hangt af van het terrein. Op het Oud Limburgs Schuttersfeest hingen er meer dan 140. Kleiner kan natuurlijk ook.'),
                 ('Doen jullie ook omroep voor jurywagens?', 'Ja. Op schuttersfeesten zoals het OLS reden diverse jurywagens met onze omroep.'),
                 ('Kan ik bij jullie een 100V-omroepinstallatie huren?', 'Ja. We verhuren complete 100V-omroepinstallaties uit eigen voorraad: hoorns, 100V-versterkers, microfoons, kabels en masten. Meestal bouwen we zelf op en regelen we de bediening, zodat je zeker weet dat alles werkt.'),
                 ('Wat zit er in een 100V-omroepset?', 'Een versterker met 100V-uitgang, het aantal hoorns of luidsprekers dat nodig is voor je terrein of route, bekabeling, masten of bevestiging en een of meer microfoons voor de speaker. We stellen de set samen op basis van jouw locatie.'),
@@ -1132,8 +1132,8 @@ INTL = {
         'crumb': '100-Volt-ELA-Anlagen',
         'h1': 'Durchsagen, die<br>überall <em>ankommen.</em>',
         'sub': '100-Volt-ELA-Anlagen mieten · Aufbau und Betreuung aus einer Hand',
-        'antwort': 'GTF Franzen aus Bocholtz (Niederlande, direkt an der Grenze bei Aachen) vermietet 100-Volt-ELA-Anlagen für Veranstaltungen: '
-                   'Druckkammerlautsprecher (Hornlautsprecher), 100-Volt-Verstärker, Mikrofone, Verkabelung und Masten aus eigenem Bestand. '
+        'antwort': 'GTF Franzen aus Bocholtz (Niederlande, direkt an der Grenze bei Aachen) vermietet 100-Volt-ELA-Anlagen für Veranstaltungen. '
+                   'Wir haben über 300 eigene Druckkammerlautsprecher (Hornlautsprecher), überwiegend von Philips, dazu 100-Volt-Verstärker, Mikrofone, Verkabelung und Masten. '
                    'Wir planen die Anlage, bauen sie auf, betreuen sie auf Wunsch während der Veranstaltung und bauen wieder ab. '
                    'Wir sind in Deutschland, den Niederlanden und Belgien im Einsatz.',
         'intro': 'Beschallung über große Flächen und lange Strecken ist seit Generationen unser Markenzeichen. Man erkennt uns an den Hörnern mit '
@@ -1165,8 +1165,8 @@ INTL = {
         'crumb': '100V public address',
         'h1': 'Announcements that<br><em>reach everyone.</em>',
         'sub': '100V public address hire · Planning, set-up and operation',
-        'antwort': 'GTF Franzen from Bocholtz (South Limburg, the Netherlands) hires out 100V public address systems for events: horn speakers, '
-                   '100V amplifiers, microphones, cabling and masts from our own stock. We plan the layout, set it up, operate it if you like and take it down again. '
+        'antwort': 'GTF Franzen from Bocholtz (South Limburg, the Netherlands) hires out 100V public address systems for events. '
+                   'We own more than 300 horn speakers, mostly Philips, plus 100V amplifiers, microphones, cabling and masts. We plan the layout, set it up, operate it if you like and take it down again. '
                    'We work across the Netherlands, Belgium and Germany.',
         'intro': 'Public address over large sites and long routes is what we have been known for over generations. You will recognise us by the horns '
                  'that read FRANZEN BOCHOLTZ. Along the Amstel Gold Race course they make sure the crowd hears what is happening in the race.',
