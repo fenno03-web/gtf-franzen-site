@@ -13,7 +13,7 @@ MAIL = 'info@franzenbocholtz.nl'  # algemeen adres, wordt doorgestuurd
 FORM_KEY = ''
 TEL = ''           # bijv. '+31612345678'
 TEL_TXT = ''       # bijv. '+31 6 12 34 56 78'
-ADRES = ''         # bijv. 'Straat 1, 6351 AA Bocholtz'
+ADRES = 'Pastoor Neujeanstraat 5, 6351 GK Bocholtz'
 KVK = ''
 INSTA = ''
 FACEBOOK = ''
@@ -39,7 +39,8 @@ ORG = {
     'image': BASE + 'assets/img/og.jpg', 'slogan': 'Sound | Light | Vision',
     'description': 'Familiebedrijf uit Bocholtz voor geluid, licht, omroepinstallaties, stroom en complete producties voor events in Nederland, België en Duitsland.',
     'areaServed': [{'@type': 'Country', 'name': n} for n in ('Nederland', 'België', 'Duitsland')],
-    'address': {'@type': 'PostalAddress', 'addressLocality': 'Bocholtz', 'addressCountry': 'NL'},
+    'address': {'@type': 'PostalAddress', 'streetAddress': 'Pastoor Neujeanstraat 5', 'postalCode': '6351 GK',
+                'addressLocality': 'Bocholtz', 'addressRegion': 'Limburg', 'addressCountry': 'NL'},
     'knowsAbout': ['Geluidstechniek', 'Lichttechniek', 'Omroepinstallaties', '100V-omroep', '100V-systemen', 'ELA-Anlagen',
                    'Public address systems', 'Aggregaten', 'Eventproductie'],
     'makesOffer': [{'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, '@id': BASE + 'omroep-100v.html#verhuur'}} for n in
